@@ -1,0 +1,7 @@
+KIND='installer, kernel 6.12.107+deb13-amd64'
+START='2026-10-14T20:47:46Z'
+STEP='apt-setup-udeb'
+FAILS=''
+LASTFAIL=0
+ALIVE=359
+END=running

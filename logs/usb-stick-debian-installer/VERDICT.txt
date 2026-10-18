@@ -1,0 +1,4 @@
+One line per boot, oldest first. A boot still marked IN PROGRESS or RUNNING after a reset is relabelled DIED by the next logged boot.
+boot 1 (installer, kernel 6.12.107+deb13-amd64, started 2026-10-17T22:05:26Z): DIED at step 'pkgsel' - reset or forced power-off (last alive 496s)
+boot 2 (installer, kernel 6.12.107+deb13-amd64, started 2026-10-18T02:14:05Z): DIED at step 'netcfg' - reset or forced power-off (last alive 69s)
+boot 3 (installer, kernel 6.12.107+deb13-amd64, started 2026-10-18T02:15:36Z): IN PROGRESS at step 'load-cdrom' (last alive 25s)

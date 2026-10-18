@@ -1,0 +1,7 @@
+KIND='installer, kernel 6.12.107+deb13-amd64'
+START='2026-10-18T02:15:36Z'
+STEP='load-cdrom'
+FAILS=''
+LASTFAIL=0
+ALIVE=25
+END=running

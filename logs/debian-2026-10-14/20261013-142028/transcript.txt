@@ -1,0 +1,67 @@
+**********************
+PowerShell transcript start
+Start time: 20261013142028
+Username: laptop\user
+RunAs User: laptop\user
+Configuration Name: 
+Machine: laptop (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.dll -NoExit -ExecutionPolicy Bypass -File D:\Acer\analysis\droid_rt\save-logs-then-wipe-sn530.ps1
+Process ID: 47700
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Reading old Linux partition 2 (read-only)...
+checksum/metadata check failed (<ext4.superblock.Superblock object at 0x0000020A23E19740> magic bytes do not match! expe
+cted=0xEF53, actual=0x00); retrying with checks relaxed
+Traceback (most recent call last):
+  File "D:\Acer\analysis\droid_rt\extract_old_logs.py", line 126, in main
+    vol = ext4.Volume(disk, offset=offset)
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\volume.py", line 117, in __init__
+    self.superblock: Superblock = Superblock(self)
+                                  ~~~~~~~~~~^^^^^^
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\superblock.py", line 142, in __init__
+    super().__init__(volume, 0x400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\struct.py", line 87, in __init__
+    self.verify()
+    ~~~~~~~~~~~^^
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\struct.py", line 147, in verify
+    raise MagicError(message)
+ext4.struct.MagicError: <ext4.superblock.Superblock object at 0x0000020A23E19740> magic bytes do not match! expected=0xE
+F53, actual=0x00
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Acer\analysis\droid_rt\extract_old_logs.py", line 141, in <module>
+    main()
+    ~~~~^^
+  File "D:\Acer\analysis\droid_rt\extract_old_logs.py", line 129, in main
+    vol = ext4.Volume(disk, offset=offset, ignore_checksum=True, ignore_flags=True)
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\volume.py", line 117, in __init__
+    self.superblock: Superblock = Superblock(self)
+                                  ~~~~~~~~~~^^^^^^
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\superblock.py", line 142, in __init__
+    super().__init__(volume, 0x400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\struct.py", line 87, in __init__
+    self.verify()
+    ~~~~~~~~~~~^^
+  File "D:\Acer\analysis\droid_rt\venv\Lib\site-packages\ext4\struct.py", line 147, in verify
+    raise MagicError(message)
+ext4.struct.MagicError: <ext4.superblock.Superblock object at 0x0000020A25ABA440> magic bytes do not match! expected=0xE
+F53, actual=0x00
+Saved 0 files to D:\Acer\old-linux-logs\20261013-142028
+
+Wiped. Disk 2 partition style is now RAW.
+**********************
+PowerShell transcript end
+End time: 20261013142038
+**********************

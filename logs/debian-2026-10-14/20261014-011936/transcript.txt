@@ -1,0 +1,30 @@
+**********************
+PowerShell transcript start
+Start time: 20261014011936
+Username: laptop\user
+RunAs User: laptop\user
+Configuration Name: 
+Machine: laptop (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.dll -NoExit -ExecutionPolicy Bypass -File D:\Acer\analysis\droid_rt\save-logs-then-wipe-sn530.ps1
+Process ID: 30500
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+PS>TerminatingError(Get-Partition): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: No MSFT_Partition objects found with property 'DiskNumber' equal to '2'.  Verify the value of the property and retry."
+>> TerminatingError(Get-Partition): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: No MSFT_Partition objects found with property 'DiskNumber' equal to '2'.  Verify the value of the property and retry."
+The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: No MSFT_Partition objects found with property 'DiskNumber' equal to '2'.  Verify the value of the property and retry.
+Get-Partition: D:\Acer\analysis\droid_rt\save-logs-then-wipe-sn530.ps1:23
+Line |
+  23 |  $root = Get-Partition -DiskNumber $disk.Number | Where-Object GptType …
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | No MSFT_Partition objects found with property 'DiskNumber' equal to '2'.  Verify the value of the property and
+     | retry.
+
+ user   ~     ]0;pwsh in user 7                                                                           in pwsh at 01:19:368

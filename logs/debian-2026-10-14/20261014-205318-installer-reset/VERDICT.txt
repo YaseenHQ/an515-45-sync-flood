@@ -1,0 +1,2 @@
+One line per boot, oldest first. A boot still marked IN PROGRESS or RUNNING after a reset is relabelled DIED by the next logged boot.
+boot 1 (installer, kernel 6.12.107+deb13-amd64, started 2026-10-14T20:47:46Z): IN PROGRESS at step 'apt-setup-udeb' (last alive 359s)

@@ -1,0 +1,77 @@
+== env
+an515_run_k=done
+an515_run_off=done
+an515_after_k=stop
+an515_after_off=-
+== plan.state
+k=0|cur=base|q=|c=|m=
+== results.txt
+(none)
+== an515 dir
+total 1448
+drwxr-xr-x    1 root     root           134 Oct 18 00:33 .
+drwxr-xr-x    1 root     root           136 Oct 17 23:33 ..
+-rw-r--r--    1 root     root        339543 Oct 17 23:34 boot-1.log
+-rw-r--r--    1 root     root        145711 Oct 17 23:34 boot-2.log
+-rw-r--r--    1 root     root        340890 Oct 17 23:36 boot-3.log
+-rw-r--r--    1 root     root        315255 Oct 17 23:48 boot-4.log
+-rw-r--r--    1 root     root        324951 Oct 17 23:50 boot-5.log
+-rw-r--r--    1 root     root             2 Oct 17 23:49 counter
+-rw-r--r--    1 root     root            22 Oct 18 00:38 plan.state
+== boots
+IDX BOOT ID                          FIRST ENTRY                 LAST ENTRY
+ -5 18e6d53a90834a548a6ff53ce6294b9f Sat 2026-10-17 19:08:02 EDT Sat 2026-10-17 19:08:40 EDT
+ -4 8c57cd342c844ea7aa70f37a78099e7e Sat 2026-10-17 19:33:18 EDT Sat 2026-10-17 19:33:58 EDT
+ -3 d53f90b847604564bd7854423aa98c1b Sat 2026-10-17 19:34:35 EDT Sat 2026-10-17 19:34:44 EDT
+ -2 4989dca81e2f4e499c842cf37a4df648 Sat 2026-10-17 19:34:57 EDT Sat 2026-10-17 19:35:44 EDT
+ -1 fc3bc0e2751d4aee9dac658a0114ccd9 Sat 2026-10-17 19:48:10 EDT Sat 2026-10-17 19:48:19 EDT
+  0 26113ee0e18c450fa7b74dbc8c3514ce Sat 2026-10-17 19:49:04 EDT Sat 2026-10-17 19:49:51 EDT
+===== boot -2
+[    1.483746] pond kernel: Command line: BOOT_IMAGE=(hd2,gpt2)/@/boot/vmlinuz-linux-pond root=UUID=dd226aa2-19d3-46d5-8dcf-6ab692ade83f rootflags=subvol=@ rw quiet splash pcie_aspm=off pcie_port_pm=off nvme_core.default_ps_max_latency_us=0 amd_iommu=off
+[    1.485435] pond kernel: virt/tdx: TDX not supported by the host platform
+[    1.520471] pond kernel: integrity: Problem loading X.509 certificate -65
+[    1.520487] pond kernel: integrity: Problem loading X.509 certificate -65
+[    1.647010] pond kernel: 
+[   10.959123] laptop kernel: Bluetooth: hci0: No support for _PRR ACPI method
+[   12.372632] laptop wpa_supplicant[1230]: wlp5s0: nl80211: kernel reports: multicast RX registrations are not supported
+[   12.390877] laptop wpa_supplicant[1230]: p2p-dev-wlp5s0: nl80211: kernel reports: multicast RX registrations are not supported
+[   17.134020] laptop sddm-helper[2153]: gkr-pam: unable to locate daemon control file
+[    1.483997] pond kernel: DMI: Acer Nitro AN515-45/Scala_CAS, BIOS V1.14 06/24/2026
+[    1.512899] pond kernel: tpm tpm0: tpm_read_log_acpi: Failed to map ACPI memory
+[    1.737911] pond systemd[1]: Started Display Boot-Time Emergency Messages In Full Screen.
+[    2.125555] pond kernel: clocksource: Watchdog remote CPU 2 read timed out
+[    6.806949] pond systemd[1]: Stopping Display Boot-Time Emergency Messages In Full Screen...
+[    6.809635] pond systemd[1]: Stopped Display Boot-Time Emergency Messages In Full Screen.
+[   10.373900] laptop systemd[1]: Started AN515 crash trace (per-second state and journal to /var/log/an515, fsynced).
+[   10.372585] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=an515-trace comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.421633] laptop (udev-worker)[552]: cfg80211: Process '/usr/bin/set-wireless-regdom' failed with exit code 1.
+[   11.577964] laptop nvidia-powerd[982]: ERROR! Failed to get SysPwrLimitGetInfo!!
+[   12.582656] laptop dbus-broker-launch[976]: Activation request for 'org.freedesktop.home1' failed: The systemd unit 'dbus-org.freedesktop.home1.service' could not be found.
+[   12.582585] laptop audit[1255]: CRED_ACQ pid=1255 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="sddm" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=failed'
+[   13.076349] laptop sddm-helper-start-wayland[1292]: "\x1B[2m2026-10-17T23:35:09.059643Z\x1B[0m \x1B[33m WARN\x1B[0m \x1B[2mniri::backend::tty\x1B[0m\x1B[2m:\x1B[0m error adding primary node device, display-only devices may not work: Failed to open device: Device or resource busy (os error 16)\n"
+[   13.368679] laptop wireplumber[1297]: default: Failed to get percentage from UPower: org.freedesktop.DBus.Error.NameHasNoOwner
+[   17.194584] laptop audit[2174]: CRED_ACQ pid=2174 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="user" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=failed'
+[   17.923408] laptop niri[2509]: 2026-10-17T23:35:13.906764Z  WARN niri::backend::tty: error adding primary node device, display-only devices may not work: Failed to open device: Device or resource busy (os error 16)
+[   17.941826] laptop wireplumber[2399]: default: Failed to get percentage from UPower: org.freedesktop.DBus.Error.NameHasNoOwner
+[   18.369712] laptop xwayland-satellite[2914]:  2026-10-17T23:35:14.353Z INFO  xwayland_process   > _XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+[   18.444263] laptop vicinae[2911]: [V] 2026-10-17T19:35:14 warn  - Failed to load visits file from /home/user/.local/share/vicinae/metadata.json "file_open_failure"
+[   18.452155] laptop vicinae[2911]: [V] 2026-10-17T19:35:14 warn  - Failed to parse news state: "file_open_failure"
+[   18.631141] laptop vicinae[2911]: [V] 2026-10-17T19:35:14 warn  - Failed to fetch rates from the vicinae API "Host api.vicinae.com not found\n"
+[   18.660515] laptop vicinae[2911]: [V] 2026-10-17T19:35:14 warn  - Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")
+[   27.656460] laptop systemd[1255]: p11-kit-server.service: Failed with result 'exit-code'.
+===== boot -1
+[    1.472786] pond kernel: Command line: BOOT_IMAGE=(hd2,gpt2)/@/boot/vmlinuz-linux-pond root=UUID=dd226aa2-19d3-46d5-8dcf-6ab692ade83f rootflags=subvol=@ rw quiet splash pcie_aspm.policy=performance pcie_port_pm=off nvme_core.default_ps_max_latency_us=0 amd_iommu=off
+[    1.474461] pond kernel: virt/tdx: TDX not supported by the host platform
+[    1.510463] pond kernel: integrity: Problem loading X.509 certificate -65
+[    1.510478] pond kernel: integrity: Problem loading X.509 certificate -65
+[    1.637008] pond kernel: 
+[    1.473044] pond kernel: DMI: Acer Nitro AN515-45/Scala_CAS, BIOS V1.14 06/24/2026
+[    1.502889] pond kernel: tpm tpm0: tpm_read_log_acpi: Failed to map ACPI memory
+[    1.723495] pond systemd[1]: Started Display Boot-Time Emergency Messages In Full Screen.
+[    2.125456] pond kernel: clocksource: Watchdog remote CPU 2 read timed out
+[    6.730834] pond systemd[1]: Stopping Display Boot-Time Emergency Messages In Full Screen...
+[    6.734403] pond systemd[1]: Stopped Display Boot-Time Emergency Messages In Full Screen.
+[   10.366605] laptop (udev-worker)[566]: cfg80211: Process '/usr/bin/set-wireless-regdom' failed with exit code 1.
+[   10.390078] laptop systemd[1]: Started AN515 crash trace (per-second state and journal to /var/log/an515, fsynced).
+[   10.388209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=an515-trace comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+===== boot 0

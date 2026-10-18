@@ -1,0 +1,1574 @@
+[    1.472769] pond kernel: Linux version 7.2.11-1-pond (linux-pond@pond) (clang version 23.1.1, LLD 23.1.1) #1 SMP PREEMPT_DYNAMIC Thu, 15 Oct 2026 18:24:28 +0000
+[    1.472786] pond kernel: Command line: BOOT_IMAGE=(hd2,gpt2)/@/boot/vmlinuz-linux-pond root=UUID=dd226aa2-19d3-46d5-8dcf-6ab692ade83f rootflags=subvol=@ rw quiet splash pcie_aspm.policy=performance pcie_port_pm=off nvme_core.default_ps_max_latency_us=0 amd_iommu=off
+[    1.472792] pond kernel: BIOS-provided physical RAM map:
+[    1.472797] pond kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009efff]  System RAM
+[    1.472802] pond kernel: BIOS-e820: [mem 0x000000000009f000-0x00000000000bffff]  device reserved
+[    1.472806] pond kernel: BIOS-e820: [gap 0x00000000000c0000-0x00000000000fffff]
+[    1.472812] pond kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000099fffff]  System RAM
+[    1.472818] pond kernel: BIOS-e820: [mem 0x0000000009a00000-0x0000000009dfffff]  device reserved
+[    1.472822] pond kernel: BIOS-e820: [mem 0x0000000009e00000-0x0000000009efffff]  System RAM
+[    1.472826] pond kernel: BIOS-e820: [mem 0x0000000009f00000-0x0000000009f0efff]  ACPI NVS
+[    1.472831] pond kernel: BIOS-e820: [mem 0x0000000009f0f000-0x00000000bab68fff]  System RAM
+[    1.472835] pond kernel: BIOS-e820: [mem 0x00000000bab69000-0x00000000bbd68fff]  device reserved
+[    1.472839] pond kernel: BIOS-e820: [mem 0x00000000bbd69000-0x00000000c9f7efff]  System RAM
+[    1.472844] pond kernel: BIOS-e820: [mem 0x00000000c9f7f000-0x00000000ccf7efff]  device reserved
+[    1.472849] pond kernel: BIOS-e820: [mem 0x00000000ccf7f000-0x00000000cdf7efff]  ACPI NVS
+[    1.472853] pond kernel: BIOS-e820: [mem 0x00000000cdf7f000-0x00000000cdffefff]  ACPI data
+[    1.472857] pond kernel: BIOS-e820: [mem 0x00000000cdfff000-0x00000000cdffffff]  System RAM
+[    1.472863] pond kernel: BIOS-e820: [mem 0x00000000ce000000-0x00000000cfffffff]  device reserved
+[    1.472867] pond kernel: BIOS-e820: [gap 0x00000000d0000000-0x00000000f7ffffff]
+[    1.472872] pond kernel: BIOS-e820: [mem 0x00000000f8000000-0x00000000fbffffff]  device reserved
+[    1.472876] pond kernel: BIOS-e820: [gap 0x00000000fc000000-0x00000000fddfffff]
+[    1.472880] pond kernel: BIOS-e820: [mem 0x00000000fde00000-0x00000000fdefffff]  device reserved
+[    1.472884] pond kernel: BIOS-e820: [gap 0x00000000fdf00000-0x00000000fdffffff]
+[    1.472889] pond kernel: BIOS-e820: [mem 0x00000000fe000000-0x00000000fe0fffff]  device reserved
+[    1.472893] pond kernel: BIOS-e820: [gap 0x00000000fe100000-0x00000000febfffff]
+[    1.472897] pond kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec01fff]  device reserved
+[    1.472901] pond kernel: BIOS-e820: [gap 0x00000000fec02000-0x00000000fec0ffff]
+[    1.472905] pond kernel: BIOS-e820: [mem 0x00000000fec10000-0x00000000fec10fff]  device reserved
+[    1.472910] pond kernel: BIOS-e820: [gap 0x00000000fec11000-0x00000000fec1ffff]
+[    1.472914] pond kernel: BIOS-e820: [mem 0x00000000fec20000-0x00000000fec20fff]  device reserved
+[    1.472918] pond kernel: BIOS-e820: [gap 0x00000000fec21000-0x00000000fed7ffff]
+[    1.472922] pond kernel: BIOS-e820: [mem 0x00000000fed80000-0x00000000fed81fff]  device reserved
+[    1.472926] pond kernel: BIOS-e820: [gap 0x00000000fed82000-0x00000000fedfffff]
+[    1.472932] pond kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff]  device reserved
+[    1.472936] pond kernel: BIOS-e820: [gap 0x00000000fee01000-0x00000000feffffff]
+[    1.472941] pond kernel: BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff]  device reserved
+[    1.472945] pond kernel: BIOS-e820: [mem 0x0000000100000000-0x000000080e2fffff]  System RAM
+[    1.472949] pond kernel: BIOS-e820: [mem 0x000000080e300000-0x000000082fffffff]  device reserved
+[    1.472953] pond kernel: NX (Execute Disable) protection: active
+[    1.472958] pond kernel: APIC: Static calls initialized
+[    1.472964] pond kernel: efi: EFI v2.7 by INSYDE Corp.
+[    1.472969] pond kernel: efi: ACPI=0xcdffe000 ACPI 2.0=0xcdffe014 TPMFinalLog=0xcdeb8000 SMBIOS=0xcb688000 SMBIOS 3.0=0xcb686000 MEMATTR=0xb4c26018 ESRT=0xb4c29418 INITRD=0xb4be5b18 RNG=0xcdfae018 TPMEventLog=0xcdfaa018 
+[    1.472973] pond kernel: random: crng init done
+[    1.472978] pond kernel: efi: Remove mem44: MMIO range=[0xf8000000-0xfbffffff] (64MB) from e820 map
+[    1.472982] pond kernel: e820: remove [mem 0xf8000000-0xfbffffff] device reserved
+[    1.472986] pond kernel: efi: Remove mem45: MMIO range=[0xfde00000-0xfdefffff] (1MB) from e820 map
+[    1.472991] pond kernel: e820: remove [mem 0xfde00000-0xfdefffff] device reserved
+[    1.472995] pond kernel: efi: Remove mem46: MMIO range=[0xfe000000-0xfe0fffff] (1MB) from e820 map
+[    1.472999] pond kernel: e820: remove [mem 0xfe000000-0xfe0fffff] device reserved
+[    1.473008] pond kernel: efi: Not removing mem47: MMIO range=[0xfec00000-0xfec01fff] (8KB) from e820 map
+[    1.473014] pond kernel: efi: Not removing mem48: MMIO range=[0xfec10000-0xfec10fff] (4KB) from e820 map
+[    1.473019] pond kernel: efi: Not removing mem49: MMIO range=[0xfec20000-0xfec20fff] (4KB) from e820 map
+[    1.473023] pond kernel: efi: Not removing mem50: MMIO range=[0xfed80000-0xfed81fff] (8KB) from e820 map
+[    1.473027] pond kernel: efi: Not removing mem51: MMIO range=[0xfee00000-0xfee00fff] (4KB) from e820 map
+[    1.473031] pond kernel: efi: Remove mem52: MMIO range=[0xff000000-0xffffffff] (16MB) from e820 map
+[    1.473035] pond kernel: e820: remove [mem 0xff000000-0xffffffff] device reserved
+[    1.473040] pond kernel: DMI: SMBIOS 3.3.0 present.
+[    1.473044] pond kernel: DMI: Acer Nitro AN515-45/Scala_CAS, BIOS V1.14 06/24/2026
+[    1.473048] pond kernel: DMI: Memory slots populated: 2/2
+[    1.473052] pond kernel: tsc: Fast TSC calibration using PIT
+[    1.473056] pond kernel: tsc: Detected 3293.954 MHz processor
+[    1.473061] pond kernel: e820: update [mem 0x00000000-0x00000fff] System RAM ==> device reserved
+[    1.473066] pond kernel: e820: remove [mem 0x000a0000-0x000fffff] System RAM
+[    1.473071] pond kernel: last_pfn = 0x80e300 max_arch_pfn = 0x400000000
+[    1.473077] pond kernel: MTRR map: 7 entries (4 fixed + 3 variable; max 21), built from 9 variable MTRRs
+[    1.473082] pond kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    1.473086] pond kernel: last_pfn = 0xce000 max_arch_pfn = 0x400000000
+[    1.473091] pond kernel: esrt: Reserving ESRT space from 0x00000000b4c29418 to 0x00000000b4c29450.
+[    1.473096] pond kernel: e820: update [mem 0xb4c29000-0xb4c29fff] System RAM ==> device reserved
+[    1.473101] pond kernel: Using GB pages for direct mapping
+[    1.473106] pond kernel: Secure boot disabled
+[    1.473111] pond kernel: RAMDISK: [mem 0x9fb6b000-0xaefdafff]
+[    1.473115] pond kernel: ACPI: Early table checksum verification disabled
+[    1.473121] pond kernel: ACPI: RSDP 0x00000000CDFFE014 000024 (v02 ACRSYS)
+[    1.473126] pond kernel: ACPI: XSDT 0x00000000CDFBE188 000124 (v01 ACRSYS ACRPRDCT 00000002      01000013)
+[    1.473130] pond kernel: ACPI: FACP 0x00000000CDFEB000 00010C (v05 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473135] pond kernel: ACPI: DSDT 0x00000000CDFDF000 007379 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473140] pond kernel: ACPI: FACS 0x00000000CDEB5000 000040
+[    1.473146] pond kernel: ACPI: UEFI 0x00000000CDF7E000 000236 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473151] pond kernel: ACPI: SSDT 0x00000000CDFF5000 0072B0 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473160] pond kernel: ACPI: SSDT 0x00000000CDFF1000 003A21 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473165] pond kernel: ACPI: MSDM 0x00000000CDFF0000 000055 (v03 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473171] pond kernel: ACPI: SSDT 0x00000000CDFEF000 000472 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+[    1.473176] pond kernel: ACPI: TPM2 0x00000000CDFEE000 00004C (v04 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473180] pond kernel: ACPI: ASF! 0x00000000CDFED000 0000A5 (v32 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473185] pond kernel: ACPI: BOOT 0x00000000CDFEC000 000028 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473191] pond kernel: ACPI: HPET 0x00000000CDFEA000 000038 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473196] pond kernel: ACPI: APIC 0x00000000CDFE9000 000138 (v03 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473205] pond kernel: ACPI: MCFG 0x00000000CDFE8000 00003C (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473210] pond kernel: ACPI: SSDT 0x00000000CDFDE000 000080 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473216] pond kernel: ACPI: SSDT 0x00000000CDFD7000 006BBC (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+[    1.473221] pond kernel: ACPI: SSDT 0x00000000CDFD5000 001CEE (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+[    1.473226] pond kernel: ACPI: VFCT 0x00000000CDFC7000 00D884 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473230] pond kernel: ACPI: SSDT 0x00000000CDFE7000 0000F8 (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+[    1.473235] pond kernel: ACPI: SSDT 0x00000000CDFC1000 005354 (v02 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473240] pond kernel: ACPI: CRAT 0x00000000CDFC0000 000EE8 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473244] pond kernel: ACPI: CDIT 0x00000000CDFBF000 000029 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473249] pond kernel: ACPI: SSDT 0x00000000CDFFD000 000139 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473255] pond kernel: ACPI: SSDT 0x00000000CDFBD000 00028D (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473260] pond kernel: ACPI: SSDT 0x00000000CDFBC000 000D53 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473265] pond kernel: ACPI: SSDT 0x00000000CDFBA000 0010C5 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473269] pond kernel: ACPI: SSDT 0x00000000CDFB9000 000216 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473274] pond kernel: ACPI: SSDT 0x00000000CDFB5000 00362F (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473279] pond kernel: ACPI: FPDT 0x00000000CDFB4000 000044 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+[    1.473284] pond kernel: ACPI: WSMT 0x00000000CDFB2000 000028 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473288] pond kernel: ACPI: IVRS 0x00000000CDFB1000 0001A4 (v02 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473293] pond kernel: ACPI: SSDT 0x00000000CDFB0000 00007D (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473299] pond kernel: ACPI: SSDT 0x00000000CDFAF000 0004DB (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473304] pond kernel: ACPI: BGRT 0x00000000CDFB3000 000038 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+[    1.473308] pond kernel: ACPI: Reserving FACP table memory at [mem 0xcdfeb000-0xcdfeb10b]
+[    1.473313] pond kernel: ACPI: Reserving DSDT table memory at [mem 0xcdfdf000-0xcdfe6378]
+[    1.473318] pond kernel: ACPI: Reserving FACS table memory at [mem 0xcdeb5000-0xcdeb503f]
+[    1.473322] pond kernel: ACPI: Reserving UEFI table memory at [mem 0xcdf7e000-0xcdf7e235]
+[    1.473327] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdff5000-0xcdffc2af]
+[    1.473331] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdff1000-0xcdff4a20]
+[    1.473336] pond kernel: ACPI: Reserving MSDM table memory at [mem 0xcdff0000-0xcdff0054]
+[    1.473342] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfef000-0xcdfef471]
+[    1.473346] pond kernel: ACPI: Reserving TPM2 table memory at [mem 0xcdfee000-0xcdfee04b]
+[    1.473353] pond kernel: ACPI: Reserving ASF! table memory at [mem 0xcdfed000-0xcdfed0a4]
+[    1.473359] pond kernel: ACPI: Reserving BOOT table memory at [mem 0xcdfec000-0xcdfec027]
+[    1.473363] pond kernel: ACPI: Reserving HPET table memory at [mem 0xcdfea000-0xcdfea037]
+[    1.473368] pond kernel: ACPI: Reserving APIC table memory at [mem 0xcdfe9000-0xcdfe9137]
+[    1.473372] pond kernel: ACPI: Reserving MCFG table memory at [mem 0xcdfe8000-0xcdfe803b]
+[    1.473376] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfde000-0xcdfde07f]
+[    1.473381] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfd7000-0xcdfddbbb]
+[    1.473385] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfd5000-0xcdfd6ced]
+[    1.473390] pond kernel: ACPI: Reserving VFCT table memory at [mem 0xcdfc7000-0xcdfd4883]
+[    1.473396] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfe7000-0xcdfe70f7]
+[    1.473400] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfc1000-0xcdfc6353]
+[    1.473405] pond kernel: ACPI: Reserving CRAT table memory at [mem 0xcdfc0000-0xcdfc0ee7]
+[    1.473409] pond kernel: ACPI: Reserving CDIT table memory at [mem 0xcdfbf000-0xcdfbf028]
+[    1.473414] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdffd000-0xcdffd138]
+[    1.473418] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfbd000-0xcdfbd28c]
+[    1.473423] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfbc000-0xcdfbcd52]
+[    1.473427] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfba000-0xcdfbb0c4]
+[    1.473432] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfb9000-0xcdfb9215]
+[    1.473436] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfb5000-0xcdfb862e]
+[    1.473442] pond kernel: ACPI: Reserving FPDT table memory at [mem 0xcdfb4000-0xcdfb4043]
+[    1.473447] pond kernel: ACPI: Reserving WSMT table memory at [mem 0xcdfb2000-0xcdfb2027]
+[    1.473451] pond kernel: ACPI: Reserving IVRS table memory at [mem 0xcdfb1000-0xcdfb11a3]
+[    1.473456] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfb0000-0xcdfb007c]
+[    1.473460] pond kernel: ACPI: Reserving SSDT table memory at [mem 0xcdfaf000-0xcdfaf4da]
+[    1.473465] pond kernel: ACPI: Reserving BGRT table memory at [mem 0xcdfb3000-0xcdfb3037]
+[    1.473469] pond kernel: No NUMA configuration found
+[    1.473474] pond kernel: Faking a node at [mem 0x0000000000000000-0x000000080e2fffff]
+[    1.473478] pond kernel: NODE_DATA(0) allocated [mem 0x80e2d4f80-0x80e2fffff]
+[    1.473483] pond kernel: ACPI: PM-Timer IO Port: 0x408
+[    1.473487] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    1.473493] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    1.473498] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    1.473502] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    1.473507] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    1.473511] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+[    1.473516] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+[    1.473520] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+[    1.473524] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+[    1.473529] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+[    1.473533] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+[    1.473538] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+[    1.473543] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+[    1.473548] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+[    1.473552] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+[    1.473557] pond kernel: ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+[    1.473561] pond kernel: IOAPIC[0]: apic_id 33, version 33, address 0xfec00000, GSI 0-23
+[    1.473566] pond kernel: IOAPIC[1]: apic_id 34, version 33, address 0xfec01000, GSI 24-55
+[    1.473571] pond kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    1.473575] pond kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    1.473580] pond kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+[    1.473586] pond kernel: ACPI: HPET id: 0x10228210 base: 0xfed00000
+[    1.473591] pond kernel: e820: update [mem 0xb49ce000-0xb4b7efff] System RAM ==> device reserved
+[    1.473595] pond kernel: CPU topo: Max. logical packages:   1
+[    1.473600] pond kernel: CPU topo: Max. logical nodes:      1
+[    1.473604] pond kernel: CPU topo: Num. nodes per package:  1
+[    1.473609] pond kernel: CPU topo: Max. logical dies:       1
+[    1.473613] pond kernel: CPU topo: Max. dies per package:   1
+[    1.473618] pond kernel: CPU topo: Max. threads per core:   2
+[    1.473623] pond kernel: CPU topo: Num. cores per package:     8
+[    1.473627] pond kernel: CPU topo: Num. threads per package:  16
+[    1.473633] pond kernel: CPU topo: Allowing 16 present CPUs plus 0 hotplug CPUs
+[    1.473637] pond kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    1.473642] pond kernel: PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x000fffff]
+[    1.473647] pond kernel: PM: hibernation: Registered nosave memory: [mem 0x09a00000-0x09dfffff]
+[    1.473651] pond kernel: PM: hibernation: Registered nosave memory: [mem 0x09f00000-0x09f0efff]
+[    1.473656] pond kernel: PM: hibernation: Registered nosave memory: [mem 0xb49ce000-0xb4b7efff]
+[    1.473660] pond kernel: PM: hibernation: Registered nosave memory: [mem 0xb4c29000-0xb4c29fff]
+[    1.473665] pond kernel: PM: hibernation: Registered nosave memory: [mem 0xbab69000-0xbbd68fff]
+[    1.473670] pond kernel: PM: hibernation: Registered nosave memory: [mem 0xc9f7f000-0xcdffefff]
+[    1.473674] pond kernel: PM: hibernation: Registered nosave memory: [mem 0xce000000-0xffffffff]
+[    1.473687] pond kernel: [gap 0xd0000000-0xfebfffff] available for PCI devices
+[    1.473692] pond kernel: Booting paravirtualized kernel on bare hardware
+[    1.473697] pond kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    1.473702] pond kernel: Zone ranges:
+[    1.473706] pond kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    1.473711] pond kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    1.473716] pond kernel:   Normal   [mem 0x0000000100000000-0x000000080e2fffff]
+[    1.473720] pond kernel:   Device   empty
+[    1.473725] pond kernel: Movable zone start for each node
+[    1.473731] pond kernel: Early memory node ranges
+[    1.473735] pond kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    1.473740] pond kernel:   node   0: [mem 0x0000000000100000-0x00000000099fffff]
+[    1.473744] pond kernel:   node   0: [mem 0x0000000009e00000-0x0000000009efffff]
+[    1.473749] pond kernel:   node   0: [mem 0x0000000009f0f000-0x00000000bab68fff]
+[    1.473753] pond kernel:   node   0: [mem 0x00000000bbd69000-0x00000000c9f7efff]
+[    1.473758] pond kernel:   node   0: [mem 0x00000000cdfff000-0x00000000cdffffff]
+[    1.473762] pond kernel:   node   0: [mem 0x0000000100000000-0x000000080e2fffff]
+[    1.473767] pond kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000080e2fffff]
+[    1.473771] pond kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+[    1.473777] pond kernel: On node 0, zone DMA: 97 pages in unavailable ranges
+[    1.473782] pond kernel: On node 0, zone DMA32: 1024 pages in unavailable ranges
+[    1.473786] pond kernel: On node 0, zone DMA32: 15 pages in unavailable ranges
+[    1.473791] pond kernel: On node 0, zone DMA32: 4608 pages in unavailable ranges
+[    1.473795] pond kernel: On node 0, zone DMA32: 16512 pages in unavailable ranges
+[    1.473800] pond kernel: On node 0, zone Normal: 8192 pages in unavailable ranges
+[    1.473804] pond kernel: On node 0, zone Normal: 7424 pages in unavailable ranges
+[    1.473809] pond kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:16 nr_cpu_ids:16 nr_node_ids:1
+[    1.473813] pond kernel: percpu: Embedded 63 pages/cpu s221184 r8192 d28672 u262144
+[    1.473819] pond kernel: pcpu-alloc: s221184 r8192 d28672 u262144 alloc=1*2097152
+[    1.473824] pond kernel: pcpu-alloc: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 12 13 14 15 
+[    1.473829] pond kernel: Kernel command line: BOOT_IMAGE=(hd2,gpt2)/@/boot/vmlinuz-linux-pond root=UUID=dd226aa2-19d3-46d5-8dcf-6ab692ade83f rootflags=subvol=@ rw quiet splash pcie_aspm.policy=performance pcie_port_pm=off nvme_core.default_ps_max_latency_us=0 amd_iommu=off
+[    1.473833] pond kernel: Unknown kernel command line parameters "splash", will be passed to user space.
+[    1.473838] pond kernel: printk: log buffer data + meta data: 131072 + 557056 = 688128 bytes
+[    1.473842] pond kernel: Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[    1.473847] pond kernel: Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    1.473852] pond kernel: software IO TLB: area num 16.
+[    1.473858] pond kernel: Fallback order for Node 0: 0 
+[    1.473862] pond kernel: Built 1 zonelists, mobility grouping on.  Total pages: 8219663
+[    1.473867] pond kernel: Policy zone: Normal
+[    1.473871] pond kernel: mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    1.473876] pond kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=16, Nodes=1
+[    1.473880] pond kernel: ftrace: allocating 59088 entries in 231 pages
+[    1.473885] pond kernel: ftrace: allocated 231 pages with 6 groups
+[    1.473889] pond kernel: Dynamic Preempt: full
+[    1.473894] pond kernel: rcu: Preemptible hierarchical RCU implementation.
+[    1.473904] pond kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=16.
+[    1.473909] pond kernel: rcu:         RCU priority boosting: priority 1 delay 500 ms.
+[    1.473913] pond kernel:         Trampoline variant of Tasks RCU enabled.
+[    1.473918] pond kernel:         Rude variant of Tasks RCU enabled.
+[    1.473922] pond kernel:         Tracing variant of Tasks RCU enabled.
+[    1.473927] pond kernel: rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    1.473931] pond kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=16
+[    1.473936] pond kernel: RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+[    1.473940] pond kernel: RCU Tasks Rude: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+[    1.473946] pond kernel: NR_IRQS: 524544, nr_irqs: 1096, preallocated irqs: 16
+[    1.473951] pond kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    1.473956] pond kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    1.473960] pond kernel: kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+[    1.473965] pond kernel: Console: colour dummy device 80x25
+[    1.473969] pond kernel: printk: legacy console [tty0] enabled
+[    1.473974] pond kernel: ACPI: Core revision 20260408
+[    1.473978] pond kernel: clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484873504 ns
+[    1.473983] pond kernel: APIC: Switch to symmetric I/O mode setup
+[    1.473989] pond kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    1.473994] pond kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2f7afd7bcaa, max_idle_ns: 440795370325 ns
+[    1.473998] pond kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 6587.90 BogoMIPS (lpj=3293954)
+[    1.474007] pond kernel: x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    1.474012] pond kernel: LVT offset 1 assigned for vector 0xf9
+[    1.474017] pond kernel: LVT offset 2 assigned for vector 0xf4
+[    1.474021] pond kernel: Last level iTLB entries: 4KB 512, 2MB 512, 4MB 256
+[    1.474026] pond kernel: Last level dTLB entries: 4KB 2048, 2MB 2048, 4MB 1024, 1GB 0
+[    1.474032] pond kernel: process: using mwait in idle threads
+[    1.474037] pond kernel: mitigations: Enabled attack vectors: user_kernel, user_user, guest_host, guest_guest, SMT mitigations: auto
+[    1.474041] pond kernel: Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    1.474046] pond kernel: Transient Scheduler Attacks: Mitigation: Clear CPU buffers
+[    1.474051] pond kernel: Spectre V2 : Mitigation: Retpolines
+[    1.474055] pond kernel: Spectre V2 : User space: Mitigation: STIBP always-on protection
+[    1.474060] pond kernel: Speculative Return Stack Overflow: Mitigation: Safe RET
+[    1.474064] pond kernel: VMSCAPE: Mitigation: IBPB before exit to userspace
+[    1.474069] pond kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    1.474075] pond kernel: Spectre V2 : Spectre v2 / SpectreRSB: Filling RSB on context switch and VMEXIT
+[    1.474079] pond kernel: Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    1.474084] pond kernel: Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    1.474088] pond kernel: active return thunk: srso_alias_return_thunk
+[    1.474093] pond kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    1.474097] pond kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    1.474102] pond kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    1.474106] pond kernel: x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    1.474110] pond kernel: x86/fpu: Supporting XSAVE feature 0x800: 'Control-flow User registers'
+[    1.474115] pond kernel: x86/fpu: Supporting XSAVE feature 0x1000: 'Control-flow Kernel registers (KVM only)'
+[    1.474121] pond kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    1.474125] pond kernel: x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+[    1.474130] pond kernel: x86/fpu: xstate_offset[11]:  840, xstate_sizes[11]:   16
+[    1.474135] pond kernel: x86/fpu: xstate_offset[12]:  856, xstate_sizes[12]:   24
+[    1.474139] pond kernel: x86/fpu: Enabled xstate features 0x1a07, context size is 880 bytes, using 'compacted' format.
+[    1.474144] pond kernel: pid_max: default: 32768 minimum: 301
+[    1.474148] pond kernel: landlock: Up and running.
+[    1.474153] pond kernel: Yama: becoming mindful.
+[    1.474158] pond kernel: LSM support for eBPF active
+[    1.474164] pond kernel: Mount-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.474168] pond kernel: Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.474173] pond kernel: VFS: Finished mounting rootfs on nullfs
+[    1.474177] pond kernel: smpboot: CPU0: AMD Ryzen 9 5900HX with Radeon Graphics (family: 0x19, model: 0x50, stepping: 0x0)
+[    1.474182] pond kernel: Performance Events: Fam17h+ core perfctr, AMD PMU driver.
+[    1.474187] pond kernel: ... version:                   0
+[    1.474191] pond kernel: ... bit width:                 48
+[    1.474196] pond kernel: ... generic counters:          6
+[    1.474200] pond kernel: ... generic bitmap:            000000000000003f
+[    1.474204] pond kernel: ... fixed-purpose counters:    0
+[    1.474208] pond kernel: ... fixed-purpose bitmap:      0000000000000000
+[    1.474214] pond kernel: ... value mask:                0000ffffffffffff
+[    1.474218] pond kernel: ... max period:                00007fffffffffff
+[    1.474222] pond kernel: ... global_ctrl mask:          000000000000003f
+[    1.474226] pond kernel: signal: max sigframe size: 3376
+[    1.474231] pond kernel: rcu: Hierarchical SRCU implementation.
+[    1.474235] pond kernel: rcu:         Max phase no-delay instances is 400.
+[    1.474239] pond kernel: Timer migration: 2 hierarchy levels; 8 children per group; 2 crossnode level
+[    1.474244] pond kernel: MCE: In-kernel MCE decoding enabled.
+[    1.474248] pond kernel: NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    1.474253] pond kernel: smp: Bringing up secondary CPUs ...
+[    1.474258] pond kernel: smpboot: x86: Booting SMP configuration:
+[    1.474262] pond kernel: .... node  #0, CPUs:        #2  #4  #6  #8 #10 #12 #14  #1  #3  #5  #7  #9 #11 #13 #15
+[    1.474268] pond kernel: Spectre V2 : Update user space SMT mitigation: STIBP always-on
+[    1.474273] pond kernel: smp: Brought up 1 node, 16 CPUs
+[    1.474277] pond kernel: smpboot: Total of 16 processors activated (105406.52 BogoMIPS)
+[    1.474282] pond kernel: Memory: 31793820K/32878652K available (22114K kernel code, 2967K rwdata, 17000K rodata, 4832K init, 4128K bss, 1066216K reserved, 0K cma-reserved)
+[    1.474286] pond kernel: devtmpfs: initialized
+[    1.474291] pond kernel: x86/mm: Memory block size: 128MB
+[    1.474295] pond kernel: ACPI: PM: Registering ACPI NVS region [mem 0x09f00000-0x09f0efff] (61440 bytes)
+[    1.474300] pond kernel: ACPI: PM: Registering ACPI NVS region [mem 0xccf7f000-0xcdf7efff] (16777216 bytes)
+[    1.474304] pond kernel: posixtimers hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    1.474310] pond kernel: futex hash table entries: 4096 (262144 bytes on 1 NUMA nodes, total 256 KiB, linear).
+[    1.474314] pond kernel: xor: automatically using best checksumming function   avx       
+[    1.474318] pond kernel: PM: RTC time: 23:48:08, date: 2026-10-17
+[    1.474323] pond kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    1.474328] pond kernel: DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    1.474332] pond kernel: DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    1.474337] pond kernel: DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    1.474341] pond kernel: audit: initializing netlink subsys (disabled)
+[    1.474346] pond kernel: audit: type=2000 audit(1792280888.167:1): state=initialized audit_enabled=0 res=1
+[    1.474351] pond kernel: thermal_sys: Registered thermal governor 'fair_share'
+[    1.474358] pond kernel: thermal_sys: Registered thermal governor 'bang_bang'
+[    1.474367] pond kernel: thermal_sys: Registered thermal governor 'step_wise'
+[    1.474376] pond kernel: thermal_sys: Registered thermal governor 'user_space'
+[    1.474385] pond kernel: thermal_sys: Registered thermal governor 'power_allocator'
+[    1.474394] pond kernel: cpuidle: using governor ladder
+[    1.474402] pond kernel: cpuidle: using governor menu
+[    1.474410] pond kernel: Simple Boot Flag at 0x44 set to 0x1
+[    1.474418] pond kernel: Freeing SMP alternatives memory: 64K
+[    1.474427] pond kernel: efi: Freeing EFI boot services memory: 115560K
+[    1.474435] pond kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.474447] pond kernel: PCI: ECAM [mem 0xf8000000-0xfbffffff] (base 0xf8000000) for domain 0000 [bus 00-3f]
+[    1.474455] pond kernel: PCI: Using configuration type 1 for base access
+[    1.474461] pond kernel: virt/tdx: TDX not supported by the host platform
+[    1.474467] pond kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    1.474473] pond kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    1.474479] pond kernel: HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+[    1.474484] pond kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    1.474490] pond kernel: HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    1.474495] pond kernel: raid6: using avx2x2 recovery algorithm
+[    1.474501] pond kernel: raid6: skipped pq benchmark and selected avx2x4
+[    1.474509] pond kernel: ACPI: Added _OSI(Module Device)
+[    1.474515] pond kernel: ACPI: Added _OSI(Processor Device)
+[    1.474521] pond kernel: ACPI: Added _OSI(Processor Aggregator Device)
+[    1.474535] pond kernel: ACPI: 17 ACPI AML tables successfully acquired and loaded
+[    1.474542] pond kernel: ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+[    1.474548] pond kernel: ACPI: \_SB_: platform _OSC: OS support mask [006e7eff]
+[    1.474554] pond kernel: ACPI: EC: EC started
+[    1.474560] pond kernel: ACPI: EC: interrupt blocked
+[    1.474565] pond kernel: ACPI: EC: EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[    1.474570] pond kernel: ACPI: \_SB_.PCI0.LPC0.EC0_: Boot DSDT EC used to handle transactions
+[    1.474575] pond kernel: ACPI: Interpreter enabled
+[    1.474579] pond kernel: ACPI: PM: (supports S0 S3 S4 S5)
+[    1.474585] pond kernel: ACPI: Using IOAPIC for interrupt routing
+[    1.474590] pond kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.474595] pond kernel: PCI: Ignoring E820 reservations for host bridge windows
+[    1.474599] pond kernel: ACPI: Enabled 3 GPEs in block 00 to 1F
+[    1.474604] pond kernel: ACPI: \_SB_.PCI0.GPP0.PG00: New power resource
+[    1.474609] pond kernel: ACPI: \_SB_.PCI0.GPP4.PXSX.WRST: New power resource
+[    1.474613] pond kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    1.474817] pond kernel: acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    1.474959] pond kernel: acpi PNP0A08:00: _OSC: platform does not support [SHPCHotplug LTR DPC]
+[    1.475099] pond kernel: acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+[    1.475232] pond kernel: acpi PNP0A08:00: [Firmware Info]: ECAM [mem 0xf8000000-0xfbffffff] for domain 0000 [bus 00-3f] only partially covers this bridge
+[    1.475239] pond kernel: PCI host bridge to bus 0000:00
+[    1.475367] pond kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.475482] pond kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    1.475596] pond kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.475710] pond kernel: pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000cffff window]
+[    1.475824] pond kernel: pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000effff window]
+[    1.475938] pond kernel: pci_bus 0000:00: root bus resource [mem 0xd0000000-0xf7ffffff window]
+[    1.476071] pond kernel: pci_bus 0000:00: root bus resource [mem 0xfc000000-0xfeafffff window]
+[    1.476186] pond kernel: pci_bus 0000:00: root bus resource [mem 0xfed45000-0xfed811ff window]
+[    1.476299] pond kernel: pci_bus 0000:00: root bus resource [mem 0xfed81900-0xfed81fff window]
+[    1.476412] pond kernel: pci_bus 0000:00: root bus resource [mem 0xfedc0000-0xfedc0fff window]
+[    1.476526] pond kernel: pci_bus 0000:00: root bus resource [mem 0xfedc6000-0xfedc6fff window]
+[    1.476639] pond kernel: pci_bus 0000:00: root bus resource [mem 0x850200000-0xfcffffffff window]
+[    1.476756] pond kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.476892] pond kernel: pci 0000:00:00.0: [1022:1630] type 00 class 0x060000 conventional PCI endpoint
+[    1.477041] pond kernel: pci 0000:00:00.2: [1022:1631] type 00 class 0x080600 conventional PCI endpoint
+[    1.477168] pond kernel: pci 0000:00:01.0: [1022:1632] type 00 class 0x060000 conventional PCI endpoint
+[    1.477294] pond kernel: pci 0000:00:01.1: [1022:1633] type 01 class 0x060400 PCIe Root Port
+[    1.477416] pond kernel: pci 0000:00:01.1: PCI bridge to [bus 01]
+[    1.477547] pond kernel: pci 0000:00:01.1:   bridge window [io  0x3000-0x3fff]
+[    1.477669] pond kernel: pci 0000:00:01.1:   bridge window [mem 0xd0000000-0xd10fffff]
+[    1.477794] pond kernel: pci 0000:00:01.1:   bridge window [mem 0xfa00000000-0xfc01ffffff 64bit pref]
+[    1.477915] pond kernel: pci 0000:00:01.1: PME# supported from D0 D3hot D3cold
+[    1.478053] pond kernel: pci 0000:00:01.2: [1022:1634] type 01 class 0x060400 PCIe Root Port
+[    1.478177] pond kernel: pci 0000:00:01.2: PCI bridge to [bus 02]
+[    1.478298] pond kernel: pci 0000:00:01.2:   bridge window [mem 0xd1900000-0xd19fffff]
+[    1.478418] pond kernel: pci 0000:00:01.2: PME# supported from D0 D3hot D3cold
+[    1.478548] pond kernel: pci 0000:00:01.3: [1022:1634] type 01 class 0x060400 PCIe Root Port
+[    1.478673] pond kernel: pci 0000:00:01.3: PCI bridge to [bus 03]
+[    1.478815] pond kernel: pci 0000:00:01.3:   bridge window [mem 0xd1800000-0xd18fffff]
+[    1.478954] pond kernel: pci 0000:00:01.3: PME# supported from D0 D3hot D3cold
+[    1.479140] pond kernel: pci 0000:00:02.0: [1022:1632] type 00 class 0x060000 conventional PCI endpoint
+[    1.479320] pond kernel: pci 0000:00:02.1: [1022:1634] type 01 class 0x060400 PCIe Root Port
+[    1.479481] pond kernel: pci 0000:00:02.1: PCI bridge to [bus 04]
+[    1.479637] pond kernel: pci 0000:00:02.1:   bridge window [io  0x2000-0x2fff]
+[    1.479776] pond kernel: pci 0000:00:02.1:   bridge window [mem 0xd1700000-0xd17fffff]
+[    1.479901] pond kernel: pci 0000:00:02.1: PME# supported from D0 D3hot D3cold
+[    1.480033] pond kernel: pci 0000:00:02.2: [1022:1634] type 01 class 0x060400 PCIe Root Port
+[    1.480169] pond kernel: pci 0000:00:02.2: PCI bridge to [bus 05]
+[    1.480295] pond kernel: pci 0000:00:02.2:   bridge window [mem 0xd1600000-0xd16fffff]
+[    1.480418] pond kernel: pci 0000:00:02.2: PME# supported from D0 D3hot D3cold
+[    1.480542] pond kernel: pci 0000:00:08.0: [1022:1632] type 00 class 0x060000 conventional PCI endpoint
+[    1.480670] pond kernel: pci 0000:00:08.1: [1022:1635] type 01 class 0x060400 PCIe Root Port
+[    1.480793] pond kernel: pci 0000:00:08.1: PCI bridge to [bus 06]
+[    1.480913] pond kernel: pci 0000:00:08.1:   bridge window [io  0x1000-0x1fff]
+[    1.481039] pond kernel: pci 0000:00:08.1:   bridge window [mem 0xd1200000-0xd15fffff]
+[    1.481171] pond kernel: pci 0000:00:08.1:   bridge window [mem 0xfc10000000-0xfc201fffff 64bit pref]
+[    1.481308] pond kernel: pci 0000:00:08.1: enabling Extended Tags
+[    1.481430] pond kernel: pci 0000:00:08.1: PME# supported from D0 D3hot D3cold
+[    1.481557] pond kernel: pci 0000:00:08.2: [1022:1635] type 01 class 0x060400 PCIe Root Port
+[    1.481682] pond kernel: pci 0000:00:08.2: PCI bridge to [bus 07]
+[    1.481803] pond kernel: pci 0000:00:08.2:   bridge window [mem 0xd1100000-0xd11fffff]
+[    1.481923] pond kernel: pci 0000:00:08.2: enabling Extended Tags
+[    1.482076] pond kernel: pci 0000:00:08.2: PME# supported from D0 D3hot D3cold
+[    1.482215] pond kernel: pci 0000:00:14.0: [1022:790b] type 00 class 0x0c0500 conventional PCI endpoint
+[    1.482342] pond kernel: pci 0000:00:14.3: [1022:790e] type 00 class 0x060100 conventional PCI endpoint
+[    1.482473] pond kernel: pci 0000:00:18.0: [1022:166a] type 00 class 0x060000 conventional PCI endpoint
+[    1.482598] pond kernel: pci 0000:00:18.1: [1022:166b] type 00 class 0x060000 conventional PCI endpoint
+[    1.482723] pond kernel: pci 0000:00:18.2: [1022:166c] type 00 class 0x060000 conventional PCI endpoint
+[    1.482850] pond kernel: pci 0000:00:18.3: [1022:166d] type 00 class 0x060000 conventional PCI endpoint
+[    1.482976] pond kernel: pci 0000:00:18.4: [1022:166e] type 00 class 0x060000 conventional PCI endpoint
+[    1.483113] pond kernel: pci 0000:00:18.5: [1022:166f] type 00 class 0x060000 conventional PCI endpoint
+[    1.483244] pond kernel: pci 0000:00:18.6: [1022:1670] type 00 class 0x060000 conventional PCI endpoint
+[    1.483368] pond kernel: pci 0000:00:18.7: [1022:1671] type 00 class 0x060000 conventional PCI endpoint
+[    1.483505] pond kernel: pci 0000:01:00.0: [10de:249d] type 00 class 0x030000 PCIe Legacy Endpoint
+[    1.483636] pond kernel: pci 0000:01:00.0: BAR 0 [mem 0xd0000000-0xd0ffffff]
+[    1.483765] pond kernel: pci 0000:01:00.0: BAR 1 [mem 0xfa00000000-0xfbffffffff 64bit pref]
+[    1.483893] pond kernel: pci 0000:01:00.0: BAR 3 [mem 0xfc00000000-0xfc01ffffff 64bit pref]
+[    1.484026] pond kernel: pci 0000:01:00.0: BAR 5 [io  0x3000-0x307f]
+[    1.484159] pond kernel: pci 0000:01:00.0: ROM [mem 0xfff80000-0xffffffff pref]
+[    1.484287] pond kernel: pci 0000:01:00.0: PME# supported from D0 D3hot
+[    1.484414] pond kernel: pci 0000:01:00.0: 63.008 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x8 link at 0000:00:01.1 (capable of 252.048 Gb/s with 16.0 GT/s PCIe x16 link)
+[    1.484545] pond kernel: pci 0000:01:00.1: [10de:228b] type 00 class 0x040300 PCIe Endpoint
+[    1.484673] pond kernel: pci 0000:01:00.1: BAR 0 [mem 0xd1000000-0xd1003fff]
+[    1.484796] pond kernel: pci 0000:00:01.1: PCI bridge to [bus 01]
+[    1.484925] pond kernel: pci 0000:02:00.0: [144d:a809] type 00 class 0x010802 PCIe Endpoint
+[    1.485065] pond kernel: pci 0000:02:00.0: BAR 0 [mem 0xd1900000-0xd1903fff 64bit]
+[    1.485188] pond kernel: pci 0000:00:01.2: PCI bridge to [bus 02]
+[    1.485317] pond kernel: pci 0000:03:00.0: [15b7:5009] type 00 class 0x010802 PCIe Endpoint
+[    1.485445] pond kernel: pci 0000:03:00.0: BAR 0 [mem 0xd1800000-0xd1803fff 64bit]
+[    1.485572] pond kernel: pci 0000:03:00.0: BAR 4 [mem 0xd1804000-0xd18040ff 64bit]
+[    1.485693] pond kernel: pci 0000:00:01.3: PCI bridge to [bus 03]
+[    1.485823] pond kernel: pci 0000:04:00.0: [10ec:2600] type 00 class 0x020000 PCIe Endpoint
+[    1.485951] pond kernel: pci 0000:04:00.0: BAR 0 [io  0x2000-0x20ff]
+[    1.486091] pond kernel: pci 0000:04:00.0: BAR 2 [mem 0xd1704000-0xd1704fff 64bit]
+[    1.486226] pond kernel: pci 0000:04:00.0: BAR 4 [mem 0xd1700000-0xd1703fff 64bit]
+[    1.486354] pond kernel: pci 0000:04:00.0: supports D1 D2
+[    1.486486] pond kernel: pci 0000:04:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    1.486610] pond kernel: pci 0000:00:02.1: PCI bridge to [bus 04]
+[    1.486741] pond kernel: pci 0000:05:00.0: [8086:2725] type 00 class 0x028000 PCIe Endpoint
+[    1.486869] pond kernel: pci 0000:05:00.0: BAR 0 [mem 0xd1600000-0xd1603fff 64bit]
+[    1.487005] pond kernel: pci 0000:05:00.0: PME# supported from D0 D3hot D3cold
+[    1.487130] pond kernel: pci 0000:00:02.2: PCI bridge to [bus 05]
+[    1.487260] pond kernel: pci 0000:06:00.0: [1002:1638] type 00 class 0x030000 PCIe Legacy Endpoint
+[    1.487388] pond kernel: pci 0000:06:00.0: BAR 0 [mem 0xfc10000000-0xfc1fffffff 64bit pref]
+[    1.487514] pond kernel: pci 0000:06:00.0: BAR 2 [mem 0xfc20000000-0xfc201fffff 64bit pref]
+[    1.487640] pond kernel: pci 0000:06:00.0: BAR 4 [io  0x1000-0x10ff]
+[    1.487766] pond kernel: pci 0000:06:00.0: BAR 5 [mem 0xd1500000-0xd157ffff]
+[    1.487891] pond kernel: pci 0000:06:00.0: enabling Extended Tags
+[    1.488026] pond kernel: pci 0000:06:00.0: PME# supported from D1 D2 D3hot D3cold
+[    1.488157] pond kernel: pci 0000:06:00.2: [1022:15df] type 00 class 0x108000 PCIe Endpoint
+[    1.488284] pond kernel: pci 0000:06:00.2: BAR 2 [mem 0xd1400000-0xd14fffff]
+[    1.488410] pond kernel: pci 0000:06:00.2: BAR 5 [mem 0xd15c8000-0xd15c9fff]
+[    1.488540] pond kernel: pci 0000:06:00.2: enabling Extended Tags
+[    1.488670] pond kernel: pci 0000:06:00.3: [1022:1639] type 00 class 0x0c0330 PCIe Endpoint
+[    1.488805] pond kernel: pci 0000:06:00.3: BAR 0 [mem 0xd1200000-0xd12fffff 64bit]
+[    1.488938] pond kernel: pci 0000:06:00.3: enabling Extended Tags
+[    1.489072] pond kernel: pci 0000:06:00.3: PME# supported from D0 D3hot D3cold
+[    1.489203] pond kernel: pci 0000:06:00.4: [1022:1639] type 00 class 0x0c0330 PCIe Endpoint
+[    1.489332] pond kernel: pci 0000:06:00.4: BAR 0 [mem 0xd1300000-0xd13fffff 64bit]
+[    1.489460] pond kernel: pci 0000:06:00.4: enabling Extended Tags
+[    1.489592] pond kernel: pci 0000:06:00.4: PME# supported from D0 D3hot D3cold
+[    1.489722] pond kernel: pci 0000:06:00.5: [1022:15e2] type 00 class 0x048000 PCIe Endpoint
+[    1.489848] pond kernel: pci 0000:06:00.5: BAR 0 [mem 0xd1580000-0xd15bffff]
+[    1.489978] pond kernel: pci 0000:06:00.5: enabling Extended Tags
+[    1.490112] pond kernel: pci 0000:06:00.5: PME# supported from D0 D3hot D3cold
+[    1.490242] pond kernel: pci 0000:06:00.6: [1022:15e3] type 00 class 0x040300 PCIe Endpoint
+[    1.490368] pond kernel: pci 0000:06:00.6: BAR 0 [mem 0xd15c0000-0xd15c7fff]
+[    1.490494] pond kernel: pci 0000:06:00.6: enabling Extended Tags
+[    1.490620] pond kernel: pci 0000:06:00.6: PME# supported from D0 D3hot D3cold
+[    1.490739] pond kernel: pci 0000:00:08.1: PCI bridge to [bus 06]
+[    1.490867] pond kernel: pci 0000:07:00.0: [1022:7901] type 00 class 0x010601 PCIe Endpoint
+[    1.490999] pond kernel: pci 0000:07:00.0: BAR 5 [mem 0xd1101000-0xd11017ff]
+[    1.491134] pond kernel: pci 0000:07:00.0: enabling Extended Tags
+[    1.491264] pond kernel: pci 0000:07:00.1: [1022:7901] type 00 class 0x010601 PCIe Endpoint
+[    1.491392] pond kernel: pci 0000:07:00.1: BAR 5 [mem 0xd1100000-0xd11007ff]
+[    1.491525] pond kernel: pci 0000:07:00.1: enabling Extended Tags
+[    1.491646] pond kernel: pci 0000:00:08.2: PCI bridge to [bus 07]
+[    1.491653] pond kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 0
+[    1.491661] pond kernel: ACPI: PCI: Interrupt link LNKA disabled
+[    1.491667] pond kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 0
+[    1.491672] pond kernel: ACPI: PCI: Interrupt link LNKB disabled
+[    1.491676] pond kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 0
+[    1.491682] pond kernel: ACPI: PCI: Interrupt link LNKC disabled
+[    1.491686] pond kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 0
+[    1.491691] pond kernel: ACPI: PCI: Interrupt link LNKD disabled
+[    1.491696] pond kernel: ACPI: PCI: Interrupt link LNKE configured for IRQ 0
+[    1.491701] pond kernel: ACPI: PCI: Interrupt link LNKE disabled
+[    1.491707] pond kernel: ACPI: PCI: Interrupt link LNKF configured for IRQ 0
+[    1.491712] pond kernel: ACPI: PCI: Interrupt link LNKF disabled
+[    1.491717] pond kernel: ACPI: PCI: Interrupt link LNKG configured for IRQ 0
+[    1.491722] pond kernel: ACPI: PCI: Interrupt link LNKG disabled
+[    1.491727] pond kernel: ACPI: PCI: Interrupt link LNKH configured for IRQ 0
+[    1.491732] pond kernel: ACPI: PCI: Interrupt link LNKH disabled
+[    1.491737] pond kernel: ACPI: EC: interrupt unblocked
+[    1.491742] pond kernel: ACPI: EC: event unblocked
+[    1.491747] pond kernel: ACPI: EC: EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[    1.491753] pond kernel: ACPI: EC: GPE=0x3
+[    1.491759] pond kernel: ACPI: \_SB_.PCI0.LPC0.EC0_: Boot DSDT EC initialization complete
+[    1.491764] pond kernel: ACPI: \_SB_.PCI0.LPC0.EC0_: EC: Used to handle transactions and events
+[    1.491769] pond kernel: iommu: Default domain type: Translated
+[    1.491774] pond kernel: iommu: DMA domain TLB invalidation policy: lazy mode
+[    1.491778] pond kernel: SCSI subsystem initialized
+[    1.491784] pond kernel: libata version 3.00 loaded.
+[    1.491789] pond kernel: ACPI: bus type USB registered
+[    1.491793] pond kernel: usbcore: registered new interface driver usbfs
+[    1.491798] pond kernel: usbcore: registered new interface driver hub
+[    1.491802] pond kernel: usbcore: registered new device driver usb
+[    1.491807] pond kernel: EDAC MC: Ver: 3.0.0
+[    1.491812] pond kernel: efivars: Registered efivars operations
+[    1.491817] pond kernel: NetLabel: Initializing
+[    1.491822] pond kernel: NetLabel:  domain hash size = 128
+[    1.491827] pond kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.491831] pond kernel: NetLabel:  unlabeled traffic allowed by default
+[    1.491836] pond kernel: mctp: management component transport protocol core
+[    1.491841] pond kernel: NET: Registered PF_MCTP protocol family
+[    1.491846] pond kernel: PCI: Using ACPI for IRQ routing
+[    1.491853] pond kernel: PCI: pci_cache_line_size set to 64 bytes
+[    1.491858] pond kernel: resource: Expanded resource Reserved due to conflict with PCI Bus 0000:00
+[    1.491863] pond kernel: e820: register RAM buffer resource [mem 0x0009f000-0x0009ffff]
+[    1.491867] pond kernel: e820: register RAM buffer resource [mem 0x09a00000-0x0bffffff]
+[    1.491872] pond kernel: e820: register RAM buffer resource [mem 0x09f00000-0x0bffffff]
+[    1.491877] pond kernel: e820: register RAM buffer resource [mem 0xb49ce000-0xb7ffffff]
+[    1.491882] pond kernel: e820: register RAM buffer resource [mem 0xb4c29000-0xb7ffffff]
+[    1.491887] pond kernel: e820: register RAM buffer resource [mem 0xbab69000-0xbbffffff]
+[    1.491892] pond kernel: e820: register RAM buffer resource [mem 0xc9f7f000-0xcbffffff]
+[    1.491898] pond kernel: e820: register RAM buffer resource [mem 0xce000000-0xcfffffff]
+[    1.491903] pond kernel: e820: register RAM buffer resource [mem 0x80e300000-0x80fffffff]
+[    1.492037] pond kernel: pci 0000:01:00.0: vgaarb: bridge control possible
+[    1.492165] pond kernel: pci 0000:01:00.0: vgaarb: VGA device added: decodes=io+mem,owns=none,locks=none
+[    1.492292] pond kernel: pci 0000:06:00.0: vgaarb: setting as boot VGA device
+[    1.492417] pond kernel: pci 0000:06:00.0: vgaarb: bridge control possible
+[    1.492543] pond kernel: pci 0000:06:00.0: vgaarb: VGA device added: decodes=io+mem,owns=none,locks=none
+[    1.492549] pond kernel: vgaarb: loaded
+[    1.492557] pond kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    1.492562] pond kernel: hpet0: 3 comparators, 32-bit 14.318180 MHz counter
+[    1.492566] pond kernel: clocksource: Switched to clocksource tsc-early
+[    1.492571] pond kernel: VFS: Disk quotas dquot_6.6.0
+[    1.492576] pond kernel: VFS: Dquot-cache hash table entries: 512 (4096 bytes)
+[    1.492723] pond kernel: acpi PNP0C02:00: Could not reserve [mem 0xfec00000-0xfec01fff]
+[    1.492861] pond kernel: acpi PNP0C02:00: Reserved [mem 0xfee00000-0xfee00fff]
+[    1.492995] pond kernel: acpi PNP0C02:00: Reserved [mem 0xfde00000-0xfdefffff]
+[    1.493158] pond kernel: acpi PNP0C02:01: Skipped [io  0x0010-0x001f]
+[    1.493299] pond kernel: acpi PNP0C02:01: Skipped [io  0x0072-0x0073]
+[    1.493439] pond kernel: acpi PNP0C02:01: Skipped [io  0x0080]
+[    1.493579] pond kernel: acpi PNP0C02:01: Skipped [io  0x00b0-0x00b1]
+[    1.493717] pond kernel: acpi PNP0C02:01: Skipped [io  0x0092]
+[    1.493856] pond kernel: acpi PNP0C02:01: Reserved [io  0x025c]
+[    1.493994] pond kernel: acpi PNP0C02:01: Reserved [io  0x0400-0x04cf]
+[    1.494142] pond kernel: acpi PNP0C02:01: Reserved [io  0x04d0-0x04d1]
+[    1.494285] pond kernel: acpi PNP0C02:01: Reserved [io  0x04d6]
+[    1.494424] pond kernel: acpi PNP0C02:01: Reserved [io  0x0c00-0x0c01]
+[    1.494561] pond kernel: acpi PNP0C02:01: Reserved [io  0x0c14]
+[    1.494700] pond kernel: acpi PNP0C02:01: Reserved [io  0x0c50-0x0c52]
+[    1.494839] pond kernel: acpi PNP0C02:01: Reserved [io  0x0c6c]
+[    1.494977] pond kernel: acpi PNP0C02:01: Reserved [io  0x0c6f]
+[    1.495128] pond kernel: acpi PNP0C02:01: Reserved [io  0x0cd0-0x0cdb]
+[    1.495276] pond kernel: acpi PNP0C01:00: Reserved [mem 0xff000000-0xffffffff]
+[    1.495286] pond kernel: pnp: PnP ACPI init
+[    1.495291] pond kernel: pnp: PnP ACPI: found 1 devices
+[    1.495296] pond kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.495301] pond kernel: NET: Registered PF_INET protocol family
+[    1.495306] pond kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    1.495311] pond kernel: tcp_listen_portaddr_hash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    1.495315] pond kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    1.495320] pond kernel: TCP established hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    1.495327] pond kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    1.495331] pond kernel: TCP: Hash tables configured (established 262144 bind 65536)
+[    1.495336] pond kernel: MPTCP token hash table entries: 32768 (order: 8, 786432 bytes, linear)
+[    1.495341] pond kernel: UDP hash table entries: 16384 (order: 8, 1048576 bytes, linear)
+[    1.495346] pond kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.495351] pond kernel: NET: Registered PF_XDP protocol family
+[    1.495478] pond kernel: pci 0000:01:00.0: ROM [mem 0xfff80000-0xffffffff pref]: can't claim; no compatible bridge window
+[    1.495605] pond kernel: pci 0000:01:00.0: ROM [mem 0xd1080000-0xd10fffff pref]: assigned
+[    1.495731] pond kernel: pci 0000:00:01.1: PCI bridge to [bus 01]
+[    1.495856] pond kernel: pci 0000:00:01.1:   bridge window [io  0x3000-0x3fff]
+[    1.495976] pond kernel: pci 0000:00:01.1:   bridge window [mem 0xd0000000-0xd10fffff]
+[    1.496101] pond kernel: pci 0000:00:01.1:   bridge window [mem 0xfa00000000-0xfc01ffffff 64bit pref]
+[    1.496222] pond kernel: pci 0000:00:01.2: PCI bridge to [bus 02]
+[    1.496342] pond kernel: pci 0000:00:01.2:   bridge window [mem 0xd1900000-0xd19fffff]
+[    1.496461] pond kernel: pci 0000:00:01.3: PCI bridge to [bus 03]
+[    1.496582] pond kernel: pci 0000:00:01.3:   bridge window [mem 0xd1800000-0xd18fffff]
+[    1.496701] pond kernel: pci 0000:00:02.1: PCI bridge to [bus 04]
+[    1.496823] pond kernel: pci 0000:00:02.1:   bridge window [io  0x2000-0x2fff]
+[    1.496942] pond kernel: pci 0000:00:02.1:   bridge window [mem 0xd1700000-0xd17fffff]
+[    1.497072] pond kernel: pci 0000:00:02.2: PCI bridge to [bus 05]
+[    1.497192] pond kernel: pci 0000:00:02.2:   bridge window [mem 0xd1600000-0xd16fffff]
+[    1.497311] pond kernel: pci 0000:00:08.1: PCI bridge to [bus 06]
+[    1.497430] pond kernel: pci 0000:00:08.1:   bridge window [io  0x1000-0x1fff]
+[    1.497549] pond kernel: pci 0000:00:08.1:   bridge window [mem 0xd1200000-0xd15fffff]
+[    1.497669] pond kernel: pci 0000:00:08.1:   bridge window [mem 0xfc10000000-0xfc201fffff 64bit pref]
+[    1.497788] pond kernel: pci 0000:00:08.2: PCI bridge to [bus 07]
+[    1.497907] pond kernel: pci 0000:00:08.2:   bridge window [mem 0xd1100000-0xd11fffff]
+[    1.498029] pond kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.498146] pond kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.498267] pond kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.498381] pond kernel: pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000cffff window]
+[    1.498493] pond kernel: pci_bus 0000:00: resource 8 [mem 0x000d0000-0x000effff window]
+[    1.498606] pond kernel: pci_bus 0000:00: resource 9 [mem 0xd0000000-0xf7ffffff window]
+[    1.498717] pond kernel: pci_bus 0000:00: resource 10 [mem 0xfc000000-0xfeafffff window]
+[    1.498830] pond kernel: pci_bus 0000:00: resource 11 [mem 0xfed45000-0xfed811ff window]
+[    1.498942] pond kernel: pci_bus 0000:00: resource 12 [mem 0xfed81900-0xfed81fff window]
+[    1.499059] pond kernel: pci_bus 0000:00: resource 13 [mem 0xfedc0000-0xfedc0fff window]
+[    1.499179] pond kernel: pci_bus 0000:00: resource 14 [mem 0xfedc6000-0xfedc6fff window]
+[    1.499292] pond kernel: pci_bus 0000:00: resource 15 [mem 0x850200000-0xfcffffffff window]
+[    1.499422] pond kernel: pci_bus 0000:01: resource 0 [io  0x3000-0x3fff]
+[    1.499543] pond kernel: pci_bus 0000:01: resource 1 [mem 0xd0000000-0xd10fffff]
+[    1.499663] pond kernel: pci_bus 0000:01: resource 2 [mem 0xfa00000000-0xfc01ffffff 64bit pref]
+[    1.499795] pond kernel: pci_bus 0000:02: resource 1 [mem 0xd1900000-0xd19fffff]
+[    1.499925] pond kernel: pci_bus 0000:03: resource 1 [mem 0xd1800000-0xd18fffff]
+[    1.500063] pond kernel: pci_bus 0000:04: resource 0 [io  0x2000-0x2fff]
+[    1.500186] pond kernel: pci_bus 0000:04: resource 1 [mem 0xd1700000-0xd17fffff]
+[    1.500314] pond kernel: pci_bus 0000:05: resource 1 [mem 0xd1600000-0xd16fffff]
+[    1.500443] pond kernel: pci_bus 0000:06: resource 0 [io  0x1000-0x1fff]
+[    1.500563] pond kernel: pci_bus 0000:06: resource 1 [mem 0xd1200000-0xd15fffff]
+[    1.500683] pond kernel: pci_bus 0000:06: resource 2 [mem 0xfc10000000-0xfc201fffff 64bit pref]
+[    1.500811] pond kernel: pci_bus 0000:07: resource 1 [mem 0xd1100000-0xd11fffff]
+[    1.500945] pond kernel: pci 0000:01:00.1: extending delay after power-on from D3hot to 20 msec
+[    1.501077] pond kernel: pci 0000:01:00.1: D0 power state depends on 0000:01:00.0
+[    1.501205] pond kernel: pci 0000:06:00.3: extending delay after power-on from D3hot to 20 msec
+[    1.501333] pond kernel: pci 0000:06:00.4: extending delay after power-on from D3hot to 20 msec
+[    1.501460] pond kernel: pci 0000:06:00.4: __UNIQUE_ID_quirk_usb_early_handoff_471+0x0/0xaf0 took 10917 usecs
+[    1.501467] pond kernel: PCI: CLS 64 bytes, default 64
+[    1.501472] pond kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.501477] pond kernel: software IO TLB: mapped [mem 0x00000000c55d6000-0x00000000c95d6000] (64MB)
+[    1.501484] pond kernel: LVT offset 0 assigned for vector 0x400
+[    1.501489] pond kernel: Trying to unpack rootfs image as initramfs...
+[    1.501494] pond kernel: perf: AMD IBS detected (0x000003ff)
+[    1.501498] pond kernel: Initialise system trusted keyrings
+[    1.501504] pond kernel: Key type blacklist registered
+[    1.501509] pond kernel: workingset: timestamp_bits=36 (anon: 31) max_order=23 bucket_order=0 (anon: 0)
+[    1.501513] pond kernel: fuse: init (API version 7.45)
+[    1.501518] pond kernel: integrity: Platform Keyring initialized
+[    1.501523] pond kernel: integrity: Machine keyring initialized
+[    1.501529] pond kernel: Key type asymmetric registered
+[    1.501534] pond kernel: Asymmetric key parser 'x509' registered
+[    1.501538] pond kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.501543] pond kernel: io scheduler mq-deadline registered
+[    1.501548] pond kernel: io scheduler kyber registered
+[    1.501553] pond kernel: Adaptive Deadline I/O Scheduler 3.3.0 by Masahito Suzuki
+[    1.501557] pond kernel: io scheduler adios registered
+[    1.501562] pond kernel: io scheduler bfq registered
+[    1.501568] pond kernel: ledtrig-cpu: registered to indicate activity on CPUs
+[    1.501688] pond kernel: pcieport 0000:00:01.1: PME: Signaling with IRQ 25
+[    1.501813] pond kernel: pcieport 0000:00:01.2: PME: Signaling with IRQ 26
+[    1.501934] pond kernel: pcieport 0000:00:01.3: PME: Signaling with IRQ 27
+[    1.502060] pond kernel: pcieport 0000:00:02.1: PME: Signaling with IRQ 28
+[    1.502180] pond kernel: pcieport 0000:00:02.2: PME: Signaling with IRQ 29
+[    1.502299] pond kernel: pcieport 0000:00:08.1: PME: Signaling with IRQ 30
+[    1.502421] pond kernel: pcieport 0000:00:08.2: PME: Signaling with IRQ 31
+[    1.502428] pond kernel: ACPI: AC: AC Adapter [ACAD] (on-line)
+[    1.502436] pond kernel: input: Power Button as /devices/platform/PNP0C0C:00/input/input0
+[    1.502441] pond kernel: ACPI: button: Power Button [PWRB]
+[    1.502446] pond kernel: input: Sleep Button as /devices/platform/PNP0C0E:00/input/input1
+[    1.502451] pond kernel: ACPI: button: Sleep Button [SLPB]
+[    1.502455] pond kernel: input: Lid Switch as /devices/pci0000:00/0000:00:14.3/PNP0C0D:00/input/input2
+[    1.502460] pond kernel: ACPI: button: Lid Switch [LID0]
+[    1.502465] pond kernel: input: Power Button as /devices/platform/LNXPWRBN:00/input/input3
+[    1.502470] pond kernel: ACPI: button: Power Button [PWRF]
+[    1.502476] pond kernel: Monitor-Mwait will be used to enter C-1 state
+[    1.502481] pond kernel: ACPI: Enabled processor.bm_check_disable for AMD cpuidle
+[    1.502486] pond kernel: Estimated ratio of average max frequency by base frequency (times 1024): 1238
+[    1.502628] pond kernel: acpi LNXTHERM:00: registered as thermal_zone0
+[    1.502635] pond kernel: ACPI: thermal: Thermal Zone [TZ01] (67 C)
+[    1.502640] pond kernel: Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    1.502645] pond kernel: ACPI: battery: Slot [BAT1] (battery present)
+[    1.502650] pond kernel: Non-volatile memory driver v1.3
+[    1.502771] pond kernel: tpm_crb_acpi MSFT0101:00: Disabling hwrng
+[    1.502889] pond kernel: tpm tpm0: tpm_read_log_acpi: Failed to map ACPI memory
+[    1.502898] pond kernel: ACPI: bus type drm_connector registered
+[    1.503031] pond kernel: ahci 0000:07:00.0: AHCI vers 0001.0301, 32 command slots, 6 Gbps, SATA mode
+[    1.503160] pond kernel: ahci 0000:07:00.0: 1/1 ports implemented (port mask 0x2)
+[    1.503293] pond kernel: ahci 0000:07:00.0: flags: 64bit ncq sntf ilck pm led clo only pmp fbs pio slum part 
+[    1.503436] pond kernel: scsi host0: ahci
+[    1.503580] pond kernel: scsi host1: ahci
+[    1.503587] pond kernel: ata1: DUMMY
+[    1.503592] pond kernel: ata2: SATA max UDMA/133 abar m2048@0xd1101000 port 0xd1101180 irq 33 lpm-pol 3
+[    1.503719] pond kernel: ahci 0000:07:00.1: AHCI vers 0001.0301, 32 command slots, 6 Gbps, SATA mode
+[    1.503846] pond kernel: ahci 0000:07:00.1: 1/1 ports implemented (port mask 0x1)
+[    1.503973] pond kernel: ahci 0000:07:00.1: flags: 64bit ncq sntf ilck pm led clo only pmp fbs pio slum part 
+[    1.504117] pond kernel: scsi host2: ahci
+[    1.504127] pond kernel: ata3: SATA max UDMA/133 abar m2048@0xd1100000 port 0xd1100100 irq 35 lpm-pol 3
+[    1.504255] pond kernel: xhci_hcd 0000:06:00.3: xHCI Host Controller
+[    1.504381] pond kernel: xhci_hcd 0000:06:00.3: new USB bus registered, assigned bus number 1
+[    1.504511] pond kernel: xhci_hcd 0000:06:00.3: hcc params 0x0268ffe5 hci version 0x110 quirks 0x0000020000000010
+[    1.504638] pond kernel: xhci_hcd 0000:06:00.3: xHCI Host Controller
+[    1.504764] pond kernel: xhci_hcd 0000:06:00.3: new USB bus registered, assigned bus number 2
+[    1.504891] pond kernel: xhci_hcd 0000:06:00.3: Host supports USB 3.1 Enhanced SuperSpeed
+[    1.505043] pond kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.02
+[    1.505164] pond kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.505275] pond kernel: usb usb1: Product: xHCI Host Controller
+[    1.505384] pond kernel: usb usb1: Manufacturer: Linux 7.2.11-1-pond xhci-hcd
+[    1.505492] pond kernel: usb usb1: SerialNumber: <removed>:06:00.3
+[    1.505637] pond kernel: hub 1-0:1.0: USB hub found
+[    1.505781] pond kernel: hub 1-0:1.0: 4 ports detected
+[    1.505921] pond kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.506071] pond kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.02
+[    1.506183] pond kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.506292] pond kernel: usb usb2: Product: xHCI Host Controller
+[    1.506401] pond kernel: usb usb2: Manufacturer: Linux 7.2.11-1-pond xhci-hcd
+[    1.506508] pond kernel: usb usb2: SerialNumber: <removed>:06:00.3
+[    1.506654] pond kernel: hub 2-0:1.0: USB hub found
+[    1.506797] pond kernel: hub 2-0:1.0: 2 ports detected
+[    1.506929] pond kernel: xhci_hcd 0000:06:00.4: xHCI Host Controller
+[    1.507065] pond kernel: xhci_hcd 0000:06:00.4: new USB bus registered, assigned bus number 3
+[    1.507198] pond kernel: xhci_hcd 0000:06:00.4: hcc params 0x0268ffe5 hci version 0x110 quirks 0x0000020000000010
+[    1.507326] pond kernel: xhci_hcd 0000:06:00.4: xHCI Host Controller
+[    1.507453] pond kernel: xhci_hcd 0000:06:00.4: new USB bus registered, assigned bus number 4
+[    1.507581] pond kernel: xhci_hcd 0000:06:00.4: Host supports USB 3.1 Enhanced SuperSpeed
+[    1.507721] pond kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.02
+[    1.507840] pond kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.507949] pond kernel: usb usb3: Product: xHCI Host Controller
+[    1.508063] pond kernel: usb usb3: Manufacturer: Linux 7.2.11-1-pond xhci-hcd
+[    1.508172] pond kernel: usb usb3: SerialNumber: <removed>:06:00.4
+[    1.508316] pond kernel: hub 3-0:1.0: USB hub found
+[    1.508458] pond kernel: hub 3-0:1.0: 4 ports detected
+[    1.508598] pond kernel: usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.508741] pond kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.02
+[    1.508853] pond kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.508962] pond kernel: usb usb4: Product: xHCI Host Controller
+[    1.509075] pond kernel: usb usb4: Manufacturer: Linux 7.2.11-1-pond xhci-hcd
+[    1.509184] pond kernel: usb usb4: SerialNumber: <removed>:06:00.4
+[    1.509329] pond kernel: hub 4-0:1.0: USB hub found
+[    1.509472] pond kernel: hub 4-0:1.0: 2 ports detected
+[    1.509481] pond kernel: usbcore: registered new interface driver usbserial_generic
+[    1.509486] pond kernel: usbserial: USB Serial support registered for generic
+[    1.509491] pond kernel: i8042: PNP: PS/2 Controller [PNP0303:KBC0] at 0x60,0x64 irq 1
+[    1.509496] pond kernel: i8042: PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+[    1.509501] pond kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.509626] pond kernel: rtc_cmos PNP0B00:00: RTC can wake from S4
+[    1.509748] pond kernel: rtc_cmos PNP0B00:00: registered as rtc0
+[    1.509870] pond kernel: rtc_cmos PNP0B00:00: setting system clock to 2026-10-17T23:48:09 UTC (1792280889)
+[    1.509995] pond kernel: rtc_cmos PNP0B00:00: alarms up to one month, 114 bytes nvram
+[    1.510136] pond kernel: simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+[    1.510144] pond kernel: [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+[    1.510149] pond kernel: fbcon: Deferring console take-over
+[    1.510278] pond kernel: simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    1.510285] pond kernel: hid: raw HID events driver (C) Jiri Kosina
+[    1.510290] pond kernel: usbcore: registered new interface driver usbhid
+[    1.510294] pond kernel: usbhid: USB HID core driver
+[    1.510302] pond kernel: drop_monitor: Initializing network drop monitor service
+[    1.510306] pond kernel: NET: Registered PF_INET6 protocol family
+[    1.510311] pond kernel: Segment Routing with IPv6
+[    1.510316] pond kernel: RPL Segment Routing with IPv6
+[    1.510321] pond kernel: In-situ OAM (IOAM) with IPv6
+[    1.510325] pond kernel: NET: Registered PF_PACKET protocol family
+[    1.510330] pond kernel: x86/amd: Previous system reset reason [0x08000800]: an uncorrected error caused a data fabric sync flood event
+[    1.510335] pond kernel: microcode: Current revision: 0x0a500012
+[    1.510342] pond kernel: microcode: Updated early from: 0x0a50000d
+[    1.510346] pond kernel: resctrl: L3 allocation detected
+[    1.510351] pond kernel: resctrl: MB allocation detected
+[    1.510356] pond kernel: resctrl: L3 monitoring detected
+[    1.510361] pond kernel: IPI shorthand broadcast: enabled
+[    1.510365] pond kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input4
+[    1.510370] pond kernel: Piece-Of-Cake (POC) CPU Selector 2.6.3 by Masahito Suzuki [CTZ: HW (BSF), PTSelect: SW (loop)]
+[    1.510375] pond kernel: sched_clock: Marking stable (514277881, 336928)->(552926027, -38311218)
+[    1.510380] pond kernel: registered taskstats version 1
+[    1.510386] pond kernel: Loading compiled-in X.509 certificates
+[    1.510391] pond kernel: Freeing initrd memory: 250304K
+[    1.510395] pond kernel: Loaded X.509 cert 'Build time autogenerated kernel key: b958ac2926f1e4f16a2058490b40467da666af1a'
+[    1.510400] pond kernel: zswap: loaded using pool zstd
+[    1.510405] pond kernel: Demotion targets for Node 0: null
+[    1.510410] pond kernel: Key type .fscrypt registered
+[    1.510415] pond kernel: Key type fscrypt-provisioning registered
+[    1.510419] pond kernel: Btrfs loaded, zoned=yes, fsverity=yes
+[    1.510424] pond kernel: Key type big_key registered
+[    1.510430] pond kernel: integrity: Loading X.509 certificate: UEFI:db
+[    1.510435] pond kernel: integrity: Loaded X.509 cert 'Acer Database: 84f00f5841571abd2cc11a8c26d5c9c8d2b6b0b5'
+[    1.510440] pond kernel: integrity: Loading X.509 certificate: UEFI:db
+[    1.510444] pond kernel: integrity: Loaded X.509 cert 'Microsoft Windows Production PCA 2011: a92902398e16c49778cd90f99e4f9ae17c55af53'
+[    1.510449] pond kernel: integrity: Loading X.509 certificate: UEFI:db
+[    1.510454] pond kernel: integrity: Loaded X.509 cert 'Microsoft Corporation UEFI CA 2011: 13adbf4309bd82709c8cd54f316ed522988a1bd4'
+[    1.510458] pond kernel: integrity: Loading X.509 certificate: UEFI:db
+[    1.510463] pond kernel: integrity: Problem loading X.509 certificate -65
+[    1.510468] pond kernel: integrity: Error adding keys to platform keyring UEFI:db
+[    1.510474] pond kernel: integrity: Loading X.509 certificate: UEFI:db
+[    1.510478] pond kernel: integrity: Problem loading X.509 certificate -65
+[    1.510483] pond kernel: integrity: Error adding keys to platform keyring UEFI:db
+[    1.510488] pond kernel: integrity: Loading X.509 certificate: UEFI:db
+[    1.510492] pond kernel: integrity: Loaded X.509 cert 'Linpus: linpus.com: 2e092cab5e97a89f94a6e272ec7267c267cf4483'
+[    1.510497] pond kernel: PM:   Magic number: 14:531:858
+[    1.510502] pond kernel: RAS: Correctable Errors collector initialized.
+[    1.510506] pond kernel: clk: Disabling unused clocks
+[    1.510511] pond kernel: PM: genpd: Disabling unused power domains
+[    1.510659] pond kernel: usb 3-3: new high-speed USB device number 2 using xhci_hcd
+[    1.510810] pond kernel: usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[    1.510818] pond kernel: ata3: SATA link down (SStatus 0 SControl 300)
+[    1.510962] pond kernel: usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.00
+[    1.511098] pond kernel: usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    1.511221] pond kernel: usb 1-1: Product: USB2.0 HUB
+[    1.511369] pond kernel: usb 3-3: New USB device found, idVendor=0408, idProduct=a061, bcdDevice= 0.04
+[    1.511492] pond kernel: usb 3-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.511612] pond kernel: usb 3-3: Product: HD User Facing
+[    1.511728] pond kernel: usb 3-3: Manufacturer: SunplusIT Inc
+[    1.511882] pond kernel: hub 1-1:1.0: USB hub found
+[    1.512037] pond kernel: hub 1-1:1.0: 4 ports detected
+[    1.512044] pond kernel: ata2: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[    1.512050] pond kernel: ata2.00: Model 'Samsung SSD 870 QVO 1TB', rev 'SVQ02B6Q', applying quirks: noncqtrim zeroaftertrim noncqonati nolpmonati
+[    1.512057] pond kernel: ata2.00: supports DRM functions and may not be fully accessible
+[    1.512062] pond kernel: ata2.00: ATA-11: Samsung SSD 870 QVO 1TB, SVQ02B6Q, max UDMA/133
+[    1.512067] pond kernel: ata2.00: 1953525168 sectors, multi 1: LBA48 NCQ (depth 32), AA
+[    1.512072] pond kernel: ata2.00: Features: Trust Dev-Sleep DIPM NCQ-sndrcv
+[    1.512077] pond kernel: ata2.00: supports DRM functions and may not be fully accessible
+[    1.512081] pond kernel: ata2.00: configured for UDMA/133
+[    1.512228] pond kernel: usb 2-2: new SuperSpeed USB device number 2 using xhci_hcd
+[    1.512387] pond kernel: scsi 1:0:0:0: Direct-Access     ATA      Samsung SSD 870  2B6Q PQ: 0 ANSI: 5
+[    1.512397] pond kernel: ata2.00: Enabling discard_zeroes_data
+[    1.512551] pond kernel: sd 1:0:0:0: [sda] 1953525168 512-byte logical blocks: (1.00 TB/932 GiB)
+[    1.512707] pond kernel: sd 1:0:0:0: [sda] Write Protect is off
+[    1.512860] pond kernel: sd 1:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    1.513018] pond kernel: sd 1:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.513173] pond kernel: sd 1:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+[    1.513180] pond kernel: ata2.00: Enabling discard_zeroes_data
+[    1.513324] pond kernel: usb 2-2: New USB device found, idVendor=0951, idProduct=1666, bcdDevice= 1.10
+[    1.513447] pond kernel: usb 2-2: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+[    1.513563] pond kernel: usb 2-2: Product: DataTraveler 3.0
+[    1.513678] pond kernel: usb 2-2: Manufacturer: Kingston
+[    1.513793] pond kernel: usb 2-2: SerialNumber: <removed>
+[    1.513800] pond kernel:  sda: sda1 sda2
+[    1.513954] pond kernel: sd 1:0:0:0: [sda] supports TCG Opal
+[    1.514114] pond kernel: sd 1:0:0:0: [sda] Attached SCSI disk
+[    1.514121] pond kernel: Freeing unused decrypted memory: 2028K
+[    1.514129] pond kernel: Freeing unused kernel image (initmem) memory: 4832K
+[    1.514134] pond kernel: Write protecting the kernel read-only data: 40960k
+[    1.514139] pond kernel: Freeing unused kernel image (text/rodata gap) memory: 412K
+[    1.514144] pond kernel: Freeing unused kernel image (rodata/data gap) memory: 1432K
+[    1.514149] pond kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    1.514154] pond kernel: rodata_test: all tests were successful
+[    1.514159] pond kernel: Run /init as init process
+[    1.514163] pond kernel:   with arguments:
+[    1.514170] pond kernel:     /init
+[    1.514174] pond kernel:     splash
+[    1.514180] pond kernel:   with environment:
+[    1.514184] pond kernel:     HOME=/
+[    1.514189] pond kernel:     TERM=linux
+[    1.514195] pond systemd[1]: Successfully made /usr/ read-only.
+[    1.514343] pond kernel: usb 1-4: new full-speed USB device number 3 using xhci_hcd
+[    1.514490] pond kernel: usb 1-4: New USB device found, idVendor=8087, idProduct=0032, bcdDevice= 0.00
+[    1.514612] pond kernel: usb 1-4: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.514620] pond systemd[1]: systemd 262-1-arch running in system mode (+PAM +AUDIT -SELINUX +APPARMOR -IMA +IPE +SMACK +SECCOMP +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP +LIBARCHIVE)
+[    1.514626] pond systemd[1]: Detected architecture x86-64.
+[    1.514631] pond systemd[1]: Running in initrd.
+[    1.514637] pond systemd[1]: Initializing machine ID from random generator.
+[    1.514685] pond kernel: usb 1-1.1: new full-speed USB device number 4 using xhci_hcd
+[    1.514691] pond kernel: tsc: Refined TSC clocksource calibration: 3293.828 MHz
+[    1.514699] pond kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2f7a860dc89, max_idle_ns: 440795273958 ns
+[    1.514703] pond kernel: clocksource: Switched to clocksource tsc
+[    1.514709] pond systemd[1]: Queued start job for default target Initrd Default Target.
+[    1.514715] pond systemd[1]: Expecting device /dev/disk/by-uuid/dd226aa2-19d3-46d5-8dcf-6ab692ade83f...
+[    1.514720] pond systemd[1]: Reached target Path Units.
+[    1.514725] pond systemd[1]: Reached target Slice Units.
+[    1.514730] pond systemd[1]: Reached target Swaps.
+[    1.514735] pond systemd[1]: Reached target Timer Units.
+[    1.514740] pond systemd[1]: Listening on Journal Socket (/dev/log).
+[    1.514747] pond systemd[1]: Listening on Journal Sockets.
+[    1.514752] pond systemd[1]: TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-os
+[    1.514758] pond systemd[1]: Listening on udev Kernel Socket.
+[    1.514763] pond systemd[1]: Listening on udev Varlink Socket.
+[    1.514768] pond systemd[1]: Reached target Socket Units.
+[    1.514773] pond systemd[1]: Create List of Static Device Nodes skipped, unmet condition check ConditionFileNotEmpty=/lib/modules/7.2.11-1-pond/modules.devname
+[    1.514778] pond systemd[1]: Starting Journal Service...
+[    1.514783] pond systemd[1]: Starting Load Kernel Modules...
+[    1.514790] pond systemd[1]: TPM PCR OS Separator skipped, unmet condition check ConditionSecurity=measured-os
+[    1.514795] pond systemd[1]: TPM PCR Barrier (initrd) skipped, unmet condition check ConditionSecurity=measured-os
+[    1.514800] pond systemd[1]: Starting Create Static Device Nodes in /dev...
+[    1.514805] pond systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-os
+[    1.514811] pond systemd[1]: TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionSecurity=measured-os
+[    1.514816] pond systemd[1]: Starting Coldplug All udev Devices...
+[    1.514821] pond systemd[1]: Starting Virtual Console Setup...
+[    1.514826] pond systemd[1]: Finished Create Static Device Nodes in /dev.
+[    1.514832] pond systemd[1]: Reached target Preparation for Local File Systems.
+[    1.514838] pond systemd[1]: Reached target Local File Systems.
+[    1.514843] pond systemd[1]: Starting Rule-based Manager for Device Events and Files...
+[    1.514977] pond kernel: wmi_bus wmi_bus-PNP0C14:00: [Firmware Bug]: WMBF method block execution control method not found
+[    1.514985] pond systemd[1]: Finished Virtual Console Setup.
+[    1.515012] pond systemd-journald[188]: Collecting audit messages is disabled.
+[    1.515033] pond kernel: ACPI: video: Video Device [VGA] (multi-head: yes  rom: no  post: no)
+[    1.515043] pond kernel: input: Video Bus as /devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input5
+[    1.515050] pond systemd[1]: Started Rule-based Manager for Device Events and Files.
+[    1.515061] pond systemd-journald[188]: Journal started
+[    1.515076] pond systemd-journald[188]: Runtime Journal (/run/log/journal/fa7b4ab5e44145559b257de822a4ac1e) is 8M, max 628.6M, 620.6M free.
+[    1.524320] pond kernel: nvidia: loading out-of-tree module taints kernel.
+[    1.463487] pond systemd-modules-load[189]: Using 5 probe threads
+[    1.464704] pond systemd-modules-load[189]: Module 'btrfs' is built in
+[    1.467628] pond systemd-vconsole-setup[192]: Configuration of first virtual console was skipped, ignoring remaining ones.
+[    1.480294] pond systemd-udevd[199]: Using default interface naming scheme 'v261'.
+[    1.525034] pond systemd[1]: Started Journal Service.
+[    1.525196] pond systemd[1]: Starting Create System Files and Directories...
+[    1.532600] pond systemd[1]: Finished Create System Files and Directories.
+[    1.602021] pond kernel: usb 1-1.1: New USB device found, idVendor=0c45, idProduct=fefe, bcdDevice= 1.38
+[    1.614019] pond kernel: usb 1-1.1: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[    1.614239] pond kernel: usb 1-1.1: Product: 2.4G Dongle
+[    1.635009] pond kernel: nvidia-nvlink: Nvlink Core is being initialized, major device number 237
+[    1.637008] pond kernel: 
+[    1.637028] pond kernel: nvidia 0000:01:00.0: enabling device (0000 -> 0003)
+[    1.637221] pond kernel: nvidia 0000:01:00.0: vgaarb: VGA decodes changed: olddecodes=io+mem,decodes=none:owns=none
+[    1.679086] pond systemd[1]: Finished Coldplug All udev Devices.
+[    1.679999] pond systemd[1]: Starting Show Plymouth Boot Screen...
+[    1.694114] pond systemd[1]: Received SIGRTMIN+20 from PID 251 (plymouthd).
+[    1.709486] pond systemd[1]: Received SIGRTMIN+20 from PID 251 (plymouthd).
+[    1.709817] pond systemd[1]: Started Show Plymouth Boot Screen.
+[    1.712435] pond systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+[    1.713353] pond systemd[1]: Starting Early Battery Level Check...
+[    1.722549] pond systemd[1]: Finished Early Battery Level Check.
+[    1.723495] pond systemd[1]: Started Display Boot-Time Emergency Messages In Full Screen.
+[    1.733770] pond systemd[1]: systemd-vconsole-setup.service: Deactivated successfully.
+[    1.733847] pond systemd[1]: Stopped Virtual Console Setup.
+[    1.733913] pond systemd[1]: Stopping Virtual Console Setup...
+[    1.734579] pond systemd[1]: Starting Virtual Console Setup...
+[    1.739641] pond systemd-vconsole-setup[277]: All allocated virtual consoles are busy, will not configure key mapping and font.
+[    1.740112] pond systemd[1]: Finished Virtual Console Setup.
+[    1.851031] pond kernel: input: 2.4G Dongle as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.0/0003:0C45:FEFE.0001/input/input6
+[    1.914033] pond kernel: hid-generic 0003:0C45:FEFE.0001: input,hidraw0: USB HID v1.00 Keyboard [2.4G Dongle] on usb-0000:06:00.3-1.1/input0
+[    1.917019] pond kernel: input: 2.4G Dongle as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.1/0003:0C45:FEFE.0002/input/input7
+[    1.917050] pond kernel: hid-generic 0003:0C45:FEFE.0002: input,hidraw1: USB HID v1.00 Mouse [2.4G Dongle] on usb-0000:06:00.3-1.1/input1
+[    1.922112] pond kernel: input: 2.4G Dongle Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.2/0003:0C45:FEFE.0003/input/input8
+[    1.973021] pond kernel: input: 2.4G Dongle System Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.2/0003:0C45:FEFE.0003/input/input9
+[    1.973040] pond kernel: input: 2.4G Dongle Keyboard as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.2/0003:0C45:FEFE.0003/input/input10
+[    1.973050] pond kernel: input: 2.4G Dongle System Multi Axis as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.2/0003:0C45:FEFE.0003/input/input11
+[    1.973060] pond kernel: input: 2.4G Dongle as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.1/1-1.1:1.2/0003:0C45:FEFE.0003/input/input12
+[    1.973069] pond kernel: hid-generic 0003:0C45:FEFE.0003: input,hiddev96,hidraw2: USB HID v1.00 Keyboard [2.4G Dongle] on usb-0000:06:00.3-1.1/input2
+[    1.977049] pond kernel: hid-generic 0003:0C45:FEFE.0004: hiddev97,hidraw3: USB HID v1.00 Device [2.4G Dongle] on usb-0000:06:00.3-1.1/input3
+[    1.982020] pond kernel: hid-generic 0003:0C45:FEFE.0005: hiddev98,hidraw4: USB HID v1.00 Device [2.4G Dongle] on usb-0000:06:00.3-1.1/input4
+[    1.990009] pond kernel: usb-storage 2-2:1.0: USB Mass Storage device detected
+[    1.990261] pond kernel: scsi host3: usb-storage 2-2:1.0
+[    1.990472] pond kernel: usbcore: registered new interface driver usb-storage
+[    2.125456] pond kernel: clocksource: Watchdog remote CPU 2 read timed out
+[    2.150070] pond kernel: usb 1-1.2: new full-speed USB device number 5 using xhci_hcd
+[    2.334038] pond kernel: usb 1-1.2: New USB device found, idVendor=046d, idProduct=0adf, bcdDevice= 2.00
+[    2.348030] pond kernel: usb 1-1.2: New USB device strings: Mfr=0, Product=2, SerialNumber=3
+[    2.348240] pond kernel: usb 1-1.2: Product: G435 Wireless Gaming Headset
+[    2.348405] pond kernel: usb 1-1.2: SerialNumber: <removed>
+[    2.462023] pond kernel: hid-generic 0003:046D:0ADF.0006: hiddev99,hidraw5: USB HID v1.11 Device [G435 Wireless Gaming Headset] on usb-0000:06:00.3-1.2/input0
+[    2.470019] pond kernel: input: G435 Wireless Gaming Headset as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.2/1-1.2:1.4/0003:046D:0ADF.0007/input/input13
+[    2.521045] pond kernel: hid-generic 0003:046D:0ADF.0007: input,hidraw6: USB HID v1.11 Device [G435 Wireless Gaming Headset] on usb-0000:06:00.3-1.2/input4
+[    2.686084] pond kernel: usb 1-1.3: new full-speed USB device number 6 using xhci_hcd
+[    2.866454] pond kernel: usb 1-1.3: New USB device found, idVendor=2dc8, idProduct=301c, bcdDevice= 2.00
+[    2.884030] pond kernel: usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.884235] pond kernel: usb 1-1.3: Product: IDLE
+[    2.884404] pond kernel: usb 1-1.3: Manufacturer: 8BitDo
+[    2.884563] pond kernel: usb 1-1.3: SerialNumber: <removed>
+[    2.975046] pond kernel: hid-generic 0003:2DC8:301C.0008: hiddev100,hidraw7: USB HID v1.10 Device [8BitDo IDLE] on usb-0000:06:00.3-1.3/input0
+[    3.030033] pond kernel: scsi 3:0:0:0: Direct-Access     Kingston DataTraveler 3.0 0000 PQ: 0 ANSI: 6
+[    3.031010] pond kernel: sd 3:0:0:0: [sdb] 242155520 512-byte logical blocks: (124 GB/115 GiB)
+[    3.032021] pond kernel: sd 3:0:0:0: [sdb] Write Protect is off
+[    3.032276] pond kernel: sd 3:0:0:0: [sdb] Mode Sense: 23 00 00 00
+[    3.032496] pond kernel: sd 3:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    3.049021] pond kernel:  sdb: sdb1
+[    3.049040] pond kernel: sd 3:0:0:0: [sdb] Attached SCSI removable disk
+[    3.142071] pond kernel: usb 1-1.4: new full-speed USB device number 7 using xhci_hcd
+[    3.316856] pond systemd-modules-load[189]: Inserted module 'nvidia'
+[    3.317298] pond kernel: NVRM: loading NVIDIA UNIX Open Kernel Module for x86_64  615.78.08  Release Build  (builder@)  Thu Oct 15 20:59:54 UTC 2026
+[    3.320012] pond kernel: Key type psk registered
+[    3.321020] pond kernel: usbcore: registered new interface driver uas
+[    3.331011] pond kernel: usb 1-1.4: New USB device found, idVendor=046d, idProduct=c53f, bcdDevice=44.01
+[    3.342012] pond kernel: nvme nvme1: pci function 0000:03:00.0
+[    3.342243] pond kernel: nvme nvme0: pci function 0000:02:00.0
+[    3.345008] pond kernel: usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.345211] pond kernel: usb 1-1.4: Product: USB Receiver
+[    3.345378] pond kernel: usb 1-1.4: Manufacturer: Logitech
+[    3.346008] pond kernel: nvidia-modeset: Loading NVIDIA UNIX Open Kernel Mode Setting Driver for x86_64  615.78.08  Release Build  (builder@)  Thu Oct 15 20:58:41 UTC 2026
+[    3.350012] pond kernel: nvme nvme1: passthrough uses implicit buffer lengths
+[    3.352007] pond kernel: nvme nvme1: 16/0/0 default/read/poll queues
+[    3.356008] pond kernel: nvme nvme0: D3 entry latency set to 8 seconds
+[    3.375025] pond kernel: nvme nvme0: passthrough uses implicit buffer lengths
+[    3.377009] pond kernel:  nvme1n1: p1 p2
+[    3.377023] pond kernel: nvme nvme0: allocated 64 MiB host memory buffer (16 segments).
+[    3.430067] pond kernel: nvme nvme0: 12/0/0 default/read/poll queues
+[    3.475750] pond systemd-modules-load[189]: Inserted module 'nvidia_uvm'
+[    3.475798] pond systemd-modules-load[189]: Inserted module 'nvidia_modeset'
+[    3.476033] pond kernel:  nvme0n1: p1 p2 p3 p4
+[    3.480030] pond kernel: input: Logitech USB Receiver as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4:1.0/0003:046D:C53F.0009/input/input14
+[    3.491026] pond kernel: [drm] [nvidia-drm] [GPU ID 0x00000100] Loading driver
+[    3.519561] pond systemd[1]: Found device WDC PC SN530 SDBPNPZ-256G-1114 POND_ROOT.
+[    3.519647] pond systemd[1]: Reached target Initrd Root Device.
+[    3.520332] pond systemd[1]: Mounting /sysroot...
+[    3.569041] pond kernel: BTRFS: device label POND_ROOT devid 1 transid 154 /dev/nvme1n1p2 (259:2) scanned by mount (304)
+[    3.569065] pond kernel: BTRFS info (device nvme1n1p2): first mount of filesystem dd226aa2-19d3-46d5-8dcf-6ab692ade83f
+[    3.569074] pond kernel: BTRFS info (device nvme1n1p2): using crc32c checksum algorithm
+[    3.574009] pond kernel: BTRFS info (device nvme1n1p2): enabling ssd optimizations
+[    3.574032] pond kernel: BTRFS info (device nvme1n1p2): turning on async discard
+[    3.574041] pond kernel: BTRFS info (device nvme1n1p2): enabling free space tree
+[    3.574519] pond systemd[1]: Mounted /sysroot.
+[    3.574855] pond systemd[1]: Reached target Initrd Root File System.
+[    3.575450] pond systemd[1]: Starting Mountpoints Configured in the Real Root...
+[    3.582009] pond kernel: [drm] Initialized nvidia-drm 0.0.0 for 0000:01:00.0 on minor 1
+[    3.587238] pond systemd[1]: initrd-parse-etc.service: Deactivated successfully.
+[    3.587403] pond systemd[1]: Finished Mountpoints Configured in the Real Root.
+[    3.587468] pond systemd[1]: initrd-parse-etc.service: Triggering OnSuccess= dependencies.
+[    3.587615] pond systemd[1]: Reached target Initrd File Systems.
+[    3.607006] pond kernel: hid-generic 0003:046D:C53F.0009: input,hidraw8: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-0000:06:00.3-1.4/input0
+[    3.611008] pond kernel: input: Logitech USB Receiver Mouse as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4:1.1/0003:046D:C53F.000A/input/input15
+[    3.611026] pond kernel: input: Logitech USB Receiver Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4:1.1/0003:046D:C53F.000A/input/input16
+[    3.663021] pond kernel: input: Logitech USB Receiver System Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4:1.1/0003:046D:C53F.000A/input/input17
+[    3.663044] pond kernel: hid-generic 0003:046D:C53F.000A: input,hiddev101,hidraw9: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-0000:06:00.3-1.4/input1
+[    3.666020] pond kernel: hid-generic 0003:046D:C53F.000B: hiddev102,hidraw10: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:06:00.3-1.4/input2
+[    3.746014] pond kernel: fbcon: Deferring console take-over
+[    3.746051] pond kernel: nvidia 0000:01:00.0: [drm] fb1: nvidia-drmdrmfb frame buffer device
+[    6.707863] pond systemd-modules-load[189]: Inserted module 'nvidia_drm'
+[    6.709615] pond systemd[1]: Finished Load Kernel Modules.
+[    6.709983] pond systemd[1]: Reached target System Initialization.
+[    6.710039] pond systemd[1]: Reached target Basic System.
+[    6.710417] pond systemd[1]: Reached target Initrd Default Target.
+[    6.711801] pond systemd[1]: Starting Cleaning Up and Shutting Down Daemons...
+[    6.722022] pond kernel: amdgpu: vga_switcheroo: detected switching method \_SB_.PCI0.GP17.VGA_.ATPX handle
+[    6.723008] pond kernel: amdgpu: ATPX version 1, functions 0x00000001
+[    6.723024] pond kernel: amdgpu: ATPX Hybrid Graphics
+[    6.727995] pond kernel: amdgpu: Virtual CRAT table created for CPU
+[    6.728013] pond kernel: amdgpu: Topology: Add CPU node
+[    6.728021] pond kernel: amdgpu 0000:06:00.0: enabling device (0006 -> 0007)
+[    6.728287] pond kernel: amdgpu 0000:06:00.0: initializing kernel modesetting (RENOIR 0x1002:0x1638 0x1025:0x151E 0xC4).
+[    6.728490] pond kernel: amdgpu 0000:06:00.0: register mmio base: 0xD1500000
+[    6.728648] pond kernel: amdgpu 0000:06:00.0: register mmio size: 524288
+[    6.728822] pond kernel: amdgpu 0000:06:00.0: detected ip block number 0 <common_v2_0_0> (soc15_common)
+[    6.729022] pond kernel: amdgpu 0000:06:00.0: detected ip block number 1 <gmc_v9_0_0> (gmc_v9_0)
+[    6.729213] pond kernel: amdgpu 0000:06:00.0: detected ip block number 2 <ih_v4_0_0> (vega10_ih)
+[    6.729399] pond kernel: amdgpu 0000:06:00.0: detected ip block number 3 <psp_v12_0_0> (psp)
+[    6.729586] pond kernel: amdgpu 0000:06:00.0: detected ip block number 4 <smu_v12_0_0> (smu)
+[    6.729753] pond kernel: amdgpu 0000:06:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+[    6.729655] pond systemd[1]: Stopped target Initrd Default Target.
+[    6.729925] pond kernel: amdgpu 0000:06:00.0: detected ip block number 6 <gfx_v9_0_0> (gfx_v9_0)
+[    6.729727] pond systemd[1]: Stopped target Basic System.
+[    6.730103] pond kernel: amdgpu 0000:06:00.0: detected ip block number 7 <sdma_v4_0_0> (sdma_v4_0)
+[    6.729781] pond systemd[1]: Stopped target Initrd Root Device.
+[    6.730276] pond kernel: amdgpu 0000:06:00.0: detected ip block number 8 <vcn_v2_0_0> (vcn_v2_0)
+[    6.729833] pond systemd[1]: Stopped target Path Units.
+[    6.730442] pond kernel: amdgpu 0000:06:00.0: detected ip block number 9 <jpeg_v2_0_0> (jpeg_v2_0)
+[    6.729886] pond systemd[1]: Stopped target Slice Units.
+[    6.730612] pond kernel: amdgpu 0000:06:00.0: Fetched VBIOS from VFCT
+[    6.729936] pond systemd[1]: Stopped target Socket Units.
+[    6.730778] pond kernel: amdgpu 0000:06:00.0: [drm] ATOM BIOS: 113-CEZANNE-021, build: 603188  , ver: 017.010.000.031.000000, 2022/02/23
+[    6.729988] pond systemd[1]: Stopped target System Initialization.
+[    6.730047] pond systemd[1]: Stopped target Swaps.
+[    6.730096] pond systemd[1]: Stopped target Timer Units.
+[    6.730731] pond systemd[1]: Starting Plymouth switch root service...
+[    6.730834] pond systemd[1]: Stopping Display Boot-Time Emergency Messages In Full Screen...
+[    6.730855] pond systemd[1]: systemd-modules-load.service: Deactivated successfully.
+[    6.730915] pond systemd[1]: Stopped Load Kernel Modules.
+[    6.731010] pond systemd[1]: systemd-tmpfiles-setup.service: Deactivated successfully.
+[    6.731083] pond systemd[1]: Stopped Create System Files and Directories.
+[    6.731183] pond systemd[1]: Stopped target Local File Systems.
+[    6.731238] pond systemd[1]: Stopped target Preparation for Local File Systems.
+[    6.731276] pond systemd[1]: systemd-udev-trigger.service: Deactivated successfully.
+[    6.731328] pond systemd[1]: Stopped Coldplug All udev Devices.
+[    6.731439] pond systemd[1]: Stopping Rule-based Manager for Device Events and Files...
+[    6.733795] pond systemd[1]: initrd-cleanup.service: Deactivated successfully.
+[    6.733984] pond systemd[1]: Finished Cleaning Up and Shutting Down Daemons.
+[    6.734222] pond systemd[1]: systemd-bsod.service: Deactivated successfully.
+[    6.734403] pond systemd[1]: Stopped Display Boot-Time Emergency Messages In Full Screen.
+[    6.735020] pond systemd[1]: systemd-battery-check.service: Deactivated successfully.
+[    6.735050] pond systemd[1]: Stopped Early Battery Level Check.
+[    6.742039] pond kernel: amdgpu 0000:06:00.0: vgaarb: deactivate vga console
+[    6.742317] pond kernel: amdgpu 0000:06:00.0: Trusted Memory Zone (TMZ) feature enabled
+[    6.742526] pond kernel: amdgpu 0000:06:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+[    6.742726] pond kernel: amdgpu 0000:06:00.0: VRAM: 512M 0x000000F400000000 - 0x000000F41FFFFFFF (512M used)
+[    6.742902] pond kernel: amdgpu 0000:06:00.0: GART: 1024M 0x0000000000000000 - 0x000000003FFFFFFF
+[    6.743086] pond kernel: amdgpu 0000:06:00.0: [drm] Detected VRAM RAM=512M, BAR=512M
+[    6.743237] pond kernel: amdgpu 0000:06:00.0: [drm] RAM width 128bits DDR4
+[    6.743384] pond kernel: amdgpu 0000:06:00.0:  512M of VRAM memory ready
+[    6.743533] pond kernel: amdgpu 0000:06:00.0:  15716M of GTT memory ready.
+[    6.743680] pond kernel: amdgpu 0000:06:00.0: [drm] GART: num cpu pages 262144, num gpu pages 262144
+[    6.743828] pond kernel: amdgpu 0000:06:00.0: [drm] PCIE GART of 1024M enabled.
+[    6.743976] pond kernel: amdgpu 0000:06:00.0: [drm] PTB located at 0x000000F41FC00000
+[    6.744129] pond kernel: amdgpu 0000:06:00.0: [drm] Loading DMUB firmware via PSP: version=0x0101002B
+[    6.744278] pond kernel: amdgpu 0000:06:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.24 DEC: 8 VEP: 0 Revision: 13
+[    6.744427] pond kernel: amdgpu 0000:06:00.0: reserve 0x400000 from 0xf41f800000 for PSP TMR
+[    6.782020] pond kernel: logitech-djreceiver 0003:046D:C53F.0009: hidraw8: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-0000:06:00.3-1.4/input0
+[    6.832010] pond kernel: amdgpu 0000:06:00.0: RAS: optional ras ta ucode is not available
+[    6.844020] pond kernel: amdgpu 0000:06:00.0: RAP: optional rap ta ucode is not available
+[    6.844337] pond kernel: amdgpu 0000:06:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+[    6.844541] pond kernel: amdgpu 0000:06:00.0: smu driver if version = 0x0000000e, smu fw if version = 0x0000000e, smu fw program = 0, smu fw version = 0x00404100 (64.65.0)
+[    6.844728] pond kernel: amdgpu 0000:06:00.0: SMU is initialized successfully!
+[    6.844911] pond kernel: amdgpu 0000:06:00.0: [drm] Display Core v3.2.384 initialized on DCN 2.1
+[    6.845100] pond kernel: amdgpu 0000:06:00.0: [drm] DP-HDMI FRL PCON supported
+[    6.845248] pond kernel: amdgpu 0000:06:00.0: [drm] DMUB hardware initialized: version=0x0101002B
+[    6.861020] pond kernel: logitech-djreceiver 0003:046D:C53F.000A: hiddev101,hidraw9: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-0000:06:00.3-1.4/input1
+[    6.875020] pond kernel: workqueue: name exceeds WQ_NAME_LEN. Truncating to: hdmi_frl_status_polling_workque
+[    6.912023] pond kernel: logitech-djreceiver 0003:046D:C53F.000B: hiddev102,hidraw10: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:06:00.3-1.4/input2
+[    6.968038] pond kernel: logitech-djreceiver 0003:046D:C53F.000B: device of type eQUAD Lightspeed 1.1 (0x0d) connected on slot 1
+[    6.968312] pond kernel: input: Logitech Wireless Mouse PID:4074 Keyboard as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4:1.2/0003:046D:C53F.000B/0003:046D:4074.000C/input/input19
+[    6.992020] pond kernel: input: Logitech Wireless Mouse PID:4074 Mouse as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4:1.2/0003:046D:C53F.000B/0003:046D:4074.000C/input/input20
+[    6.992039] pond kernel: hid-generic 0003:046D:4074.000C: input,hidraw11: USB HID v1.11 Keyboard [Logitech Wireless Mouse PID:4074] on usb-0000:06:00.3-1.4/input2:1
+[    7.015019] pond kernel: amdgpu 0000:06:00.0: kiq ring mec 2 pipe 1 q 0
+[    7.023020] pond kernel: kfd kfd: Allocated 3969056 bytes on gart
+[    7.023197] pond kernel: kfd kfd: Total number of KFD nodes to be created: 1
+[    7.023330] pond kernel: amdgpu: Virtual CRAT table created for GPU
+[    7.023339] pond kernel: amdgpu: Topology: Add GPU node [0x1002:0x1638]
+[    7.023346] pond kernel: kfd kfd: added device 1002:1638
+[    7.023470] pond kernel: amdgpu 0000:06:00.0: SE 1, SH per SE 1, CU per SH 8, active_cu_number 8
+[    7.023752] pond kernel: amdgpu 0000:06:00.0: ring gfx uses VM inv eng 0 on hub 0
+[    7.023980] pond kernel: amdgpu 0000:06:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+[    7.024220] pond kernel: amdgpu 0000:06:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+[    7.024399] pond kernel: amdgpu 0000:06:00.0: ring comp_1.2.0 uses VM inv eng 5 on hub 0
+[    7.024550] pond kernel: amdgpu 0000:06:00.0: ring comp_1.3.0 uses VM inv eng 6 on hub 0
+[    7.024698] pond kernel: amdgpu 0000:06:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+[    7.024851] pond kernel: amdgpu 0000:06:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+[    7.025006] pond kernel: amdgpu 0000:06:00.0: ring comp_1.2.1 uses VM inv eng 9 on hub 0
+[    7.025159] pond kernel: amdgpu 0000:06:00.0: ring comp_1.3.1 uses VM inv eng 10 on hub 0
+[    7.025307] pond kernel: amdgpu 0000:06:00.0: ring kiq_0.2.1.0 uses VM inv eng 11 on hub 0
+[    7.025460] pond kernel: amdgpu 0000:06:00.0: ring sdma0 uses VM inv eng 0 on hub 8
+[    7.025641] pond kernel: amdgpu 0000:06:00.0: ring vcn_dec uses VM inv eng 1 on hub 8
+[    7.025790] pond kernel: amdgpu 0000:06:00.0: ring vcn_enc0 uses VM inv eng 4 on hub 8
+[    7.025939] pond kernel: amdgpu 0000:06:00.0: ring vcn_enc1 uses VM inv eng 5 on hub 8
+[    7.026097] pond kernel: amdgpu 0000:06:00.0: ring jpeg_dec uses VM inv eng 6 on hub 8
+[    7.026243] pond kernel: amdgpu 0000:06:00.0: Runtime PM not available
+[    7.026426] pond kernel: amdgpu 0000:06:00.0: [drm] Using custom brightness curve
+[    7.026664] pond kernel: amdgpu 0000:06:00.0: [drm] Registered 4 planes with drm panic
+[    7.026924] pond kernel: [drm] Initialized amdgpu 3.64.0 for 0000:06:00.0 on minor 2
+[    7.028020] pond kernel: fbcon: amdgpudrmfb (fb0) is primary device
+[    7.028039] pond kernel: fbcon: Deferring console take-over
+[    7.028048] pond kernel: amdgpu 0000:06:00.0: [drm] fb0: amdgpudrmfb frame buffer device
+[    7.036218] pond systemd[1]: systemd-udevd.service: Deactivated successfully.
+[    7.036532] pond systemd[1]: Stopped Rule-based Manager for Device Events and Files.
+[    7.036618] pond systemd[1]: systemd-udevd.service: Consumed 4.136s CPU time over 5.570s wall clock time, 38.7M memory peak.
+[    7.036858] pond systemd[1]: systemd-udevd-varlink.socket: Deactivated successfully.
+[    7.036918] pond systemd[1]: Closed udev Varlink Socket.
+[    7.037522] pond systemd[1]: Starting Cleanup udev Database...
+[    7.037545] pond systemd[1]: systemd-tmpfiles-setup-dev.service: Deactivated successfully.
+[    7.037571] pond systemd[1]: Stopped Create Static Device Nodes in /dev.
+[    7.051478] pond systemd[1]: initrd-udevadm-cleanup-db.service: Deactivated successfully.
+[    7.051661] pond systemd[1]: Finished Cleanup udev Database.
+[    7.051907] pond systemd[1]: Reached target Switch Root.
+[    7.132898] pond systemd[1]: Finished Plymouth switch root service.
+[    7.133737] pond systemd[1]: Starting Switch Root...
+[    7.150469] pond systemd[1]: Switching root.
+[    7.193629] pond systemd-journald[188]: Journal stopped
+[    8.274932] laptop systemd-journald[188]: Received SIGTERM from PID 1 (systemd).
+[    8.274955] laptop systemd[1]: systemd 262-1-arch running in system mode (+PAM +AUDIT -SELINUX +APPARMOR -IMA +IPE +SMACK +SECCOMP +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP +LIBARCHIVE)
+[    8.274965] laptop systemd[1]: Detected architecture x86-64.
+[    8.274973] laptop systemd[1]: Hostname set to <laptop>.
+[    8.274980] laptop systemd[1]: bpf-restrict-fs: LSM BPF program attached
+[    8.274988] laptop kernel: zram: Added device: zram0
+[    8.274996] laptop systemd[1]: initrd-switch-root.service: Deactivated successfully.
+[    8.275020] laptop systemd[1]: Stopped Switch Root.
+[    8.275029] laptop systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[    8.275035] laptop systemd[1]: Created slice CUPS Slice.
+[    8.275042] laptop systemd[1]: Created slice Slice /system/dirmngr.
+[    8.275049] laptop systemd[1]: Created slice Slice /system/getty.
+[    8.275057] laptop systemd[1]: Created slice Slice /system/gpg-agent.
+[    8.275064] laptop systemd[1]: Created slice Slice /system/gpg-agent-browser.
+[    8.275072] laptop systemd[1]: Created slice Slice /system/gpg-agent-extra.
+[    8.275079] laptop systemd[1]: Created slice Slice /system/gpg-agent-ssh.
+[    8.275086] laptop systemd[1]: Created slice Slice /system/keyboxd.
+[    8.275093] laptop systemd[1]: Created slice Slice /system/modprobe.
+[    8.275101] laptop systemd[1]: Created slice Slice /system/systemd-fsck.
+[    8.275108] laptop systemd[1]: Created slice Slice /system/systemd-zram-setup.
+[    8.275115] laptop systemd[1]: Created slice User and Session Slice.
+[    8.275122] laptop systemd[1]: Dispatch Password Requests to Console Directory Watch skipped, unmet condition check ConditionPathExists=!/run/plymouth/pid
+[    8.275129] laptop systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    8.275136] laptop systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    8.275143] laptop systemd[1]: Expecting device /dev/disk/by-partuuid/583ab356-a8c0-4f9b-b3f0-792b2dab268f...
+[    8.275149] laptop systemd[1]: Expecting device /dev/disk/by-uuid/dd226aa2-19d3-46d5-8dcf-6ab692ade83f...
+[    8.275156] laptop systemd[1]: Expecting device /dev/zram0...
+[    8.275164] laptop systemd[1]: Reached target Local dm-clone Devices.
+[    8.275171] laptop systemd[1]: Reached target Login Prompts.
+[    8.275178] laptop systemd[1]: Reached target Image Downloads.
+[    8.275184] laptop systemd[1]: Stopped target Switch Root.
+[    8.275191] laptop systemd[1]: Stopped target Initrd File Systems.
+[    8.275198] laptop systemd[1]: Stopped target Initrd Root File System.
+[    8.275204] laptop systemd[1]: Reached target Local Integrity Protected Volumes.
+[    8.275211] laptop systemd[1]: Reached target Remote Encrypted Volumes.
+[    8.275218] laptop systemd[1]: Reached target Remote File Systems.
+[    8.275226] laptop systemd[1]: Reached target Remote Integrity Protected Volumes.
+[    8.275232] laptop systemd[1]: Reached target Remote Verity Protected Volumes.
+[    8.275239] laptop systemd[1]: Reached target Slice Units.
+[    8.275246] laptop systemd[1]: Reached target Local Verity Protected Volumes.
+[    8.275254] laptop systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    8.275266] laptop systemd[1]: Listening on LVM2 poll daemon socket.
+[    8.275273] laptop systemd[1]: Listening on Query the User Interactively for a Password.
+[    8.275280] laptop systemd[1]: Listening on Process Core Dump Socket.
+[    8.275287] laptop systemd[1]: Listening on Credential Encryption/Decryption.
+[    8.275293] laptop systemd[1]: Listening on Disk Encryption Enrollment Service Socket.
+[    8.275302] laptop systemd[1]: Listening on Factory Reset Management.
+[    8.275310] laptop systemd[1]: Listening on Hostname Service Socket.
+[    8.275317] laptop systemd[1]: Listening on Journal Audit Socket.
+[    8.275328] laptop systemd[1]: Listening on DDI File System Mounter Socket.
+[    8.275335] laptop systemd[1]: Listening on Console Output Muting Service Socket.
+[    8.275342] laptop systemd[1]: Listening on Namespace Resource Manager Socket.
+[    8.275349] laptop systemd[1]: TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-os
+[    8.275355] laptop systemd[1]: Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[    8.275362] laptop systemd[1]: Listening on Disk Repartitioning Service Socket.
+[    8.275370] laptop systemd[1]: Listening on Report System Basic Metrics Socket.
+[    8.275382] laptop systemd[1]: Listening on CGroup Report Varlink Socket.
+[    8.275389] laptop systemd[1]: Listening on Report Files Metrics Socket.
+[    8.275396] laptop systemd[1]: Listening on Report Signing Socket (Local Software Key).
+[    8.275403] laptop systemd[1]: Report Signing Socket (TPM2) skipped, unmet condition check ConditionSecurity=measured-uki
+[    8.275410] laptop systemd[1]: Report Signing Socket (configfs-tsm) skipped, unmet condition check ConditionSecurity=cvm
+[    8.275416] laptop systemd[1]: Listening on System Report Socket.
+[    8.275423] laptop systemd[1]: Listening on Resolve Monitor Varlink Socket.
+[    8.275430] laptop systemd[1]: Listening on Resolve Service Varlink Socket.
+[    8.275438] laptop systemd[1]: Listening on Simple Block Device Backed Storage Provider.
+[    8.275444] laptop systemd[1]: Listening on Simple File System Backed Storage Provider.
+[    8.275451] laptop systemd[1]: Listening on System Install Tool.
+[    8.275458] laptop systemd[1]: Recompute TPM PCR Policy on Completed System Update skipped, unmet condition check ConditionSecurity=measured-uki
+[    8.275465] laptop systemd[1]: Listening on System Updates.
+[    8.275471] laptop systemd[1]: Listening on udev Varlink Socket.
+[    8.275478] laptop systemd[1]: Listening on User Database Manager Socket.
+[    8.275485] laptop systemd[1]: Mounting Huge Pages File System...
+[    8.275493] laptop systemd[1]: Mounting POSIX Message Queue File System...
+[    8.275499] laptop systemd[1]: Mounting Kernel Debug File System...
+[    8.275506] laptop systemd[1]: Mounting Kernel Trace File System...
+[    8.275513] laptop systemd[1]: Starting Create List of Static Device Nodes...
+[    8.275520] laptop systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    8.275527] laptop systemd[1]: Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[    8.275534] laptop systemd[1]: Mounting Kernel Configuration File System...
+[    8.275541] laptop systemd[1]: Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[    8.275547] laptop systemd[1]: Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+[    8.275556] laptop systemd[1]: Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+[    8.275562] laptop systemd[1]: Mounting FUSE Control File System...
+[    8.275569] laptop systemd[1]: plymouth-switch-root.service: Deactivated successfully.
+[    8.275576] laptop systemd[1]: Stopped Plymouth switch root service.
+[    8.275583] laptop systemd[1]: Clear SysFail Entry If The Boot Is Successful skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/LoaderEntrySysFail-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f
+[    8.275590] laptop systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[    8.275597] laptop systemd[1]: Starting Journal Service...
+[    8.275604] laptop systemd[1]: Starting Load Kernel Modules...
+[    8.275612] laptop systemd[1]: Starting Generate Network Units from Kernel Command Line...
+[    8.275619] laptop systemd[1]: TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[    8.275625] laptop systemd[1]: TPM PCR OS Separator skipped, unmet condition check ConditionSecurity=measured-os
+[    8.275632] laptop systemd[1]: Starting Remount Root and Kernel File Systems...
+[    8.275639] laptop systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-os
+[    8.275646] laptop systemd[1]: TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionPathExists=/etc/initrd-release
+[    8.275652] laptop systemd[1]: Reached target Local Encrypted Volumes.
+[    8.275660] laptop systemd[1]: TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-os
+[    8.275668] laptop systemd[1]: Starting Load udev Rules from Credentials...
+[    8.275674] laptop systemd[1]: Starting Coldplug All udev Devices...
+[    8.275681] laptop systemd[1]: Mounted Huge Pages File System.
+[    8.275688] laptop systemd[1]: Mounted POSIX Message Queue File System.
+[    8.275695] laptop systemd[1]: Mounted Kernel Debug File System.
+[    8.275702] laptop systemd[1]: Mounted Kernel Trace File System.
+[    8.275708] laptop systemd[1]: Finished Create List of Static Device Nodes.
+[    8.275715] laptop systemd[1]: Mounted Kernel Configuration File System.
+[    8.275722] laptop systemd[1]: Mounted FUSE Control File System.
+[    8.275730] laptop systemd[1]: Finished Generate Network Units from Kernel Command Line.
+[    8.275737] laptop systemd[1]: Reached target Preparation for Network.
+[    8.275743] laptop systemd[1]: Starting Create Static Device Nodes in /dev gracefully...
+[    8.275750] laptop systemd[1]: Finished Load udev Rules from Credentials.
+[    8.275756] laptop kernel: i2c_dev: i2c /dev entries driver
+[    8.275778] laptop systemd-journald[420]: Collecting audit messages is enabled.
+[    8.275794] laptop systemd[1]: Finished Load Kernel Modules.
+[    8.275801] laptop kernel: audit: type=1130 audit(1792280897.266:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.275808] laptop systemd[1]: Starting Apply Kernel Variables...
+[    8.275819] laptop systemd-journald[420]: Journal started
+[    8.275837] laptop systemd-journald[420]: Runtime Journal (/run/log/journal/6dd80cf9188a45349012f5aba8250e22) is 8M, max 628.6M, 620.6M free.
+[    8.269210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.218371] laptop systemd[1]: Queued start job for default target Graphical Interface.
+[    8.220586] laptop systemd[1]: systemd-journald.service: Deactivated successfully.
+[    8.264423] laptop systemd-modules-load[421]: Using 4 probe threads
+[    8.274210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.269429] laptop systemd-modules-load[421]: Inserted module 'crypto_user'
+[    8.270058] laptop systemd-modules-load[421]: Inserted module 'ntsync'
+[    8.270587] laptop systemd-modules-load[421]: Inserted module 'uinput'
+[    8.270846] laptop systemd-modules-load[421]: Inserted module 'i2c_dev'
+[    8.277022] laptop systemd[1]: Started Journal Service.
+[    8.277041] laptop kernel: audit: type=1130 audit(1792280897.271:3): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.277058] laptop kernel: device-mapper: uevent: version 1.0.3
+[    8.277069] laptop kernel: device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+[    8.278209] laptop audit: BPF prog-id=31 op=LOAD
+[    8.278210] laptop audit: BPF prog-id=32 op=LOAD
+[    8.278210] laptop audit: BPF prog-id=33 op=LOAD
+[    8.281028] laptop kernel: audit: type=1334 audit(1792280897.275:4): prog-id=31 op=LOAD
+[    8.281051] laptop kernel: audit: type=1334 audit(1792280897.275:5): prog-id=32 op=LOAD
+[    8.281076] laptop kernel: audit: type=1334 audit(1792280897.275:6): prog-id=33 op=LOAD
+[    8.281055] laptop systemd[1]: Starting User Database Manager...
+[    8.281370] laptop systemd[1]: Finished Apply Kernel Variables.
+[    8.279210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.282010] laptop kernel: audit: type=1130 audit(1792280897.276:7): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.282701] laptop systemd[1]: Starting CLI Netfilter Manager...
+[    8.282959] laptop systemd[1]: Finished Remount Root and Kernel File Systems.
+[    8.283007] laptop kernel: BTRFS info (device nvme1n1p2 state M): use zstd compression, level 1
+[    8.280210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.283067] laptop kernel: audit: type=1130 audit(1792280897.277:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.283399] laptop systemd[1]: Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+[    8.283441] laptop systemd[1]: Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+[    8.284100] laptop systemd[1]: Starting Load/Save OS Random Seed...
+[    8.284168] laptop systemd[1]: TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-os
+[    8.291130] laptop systemd[1]: Finished Load/Save OS Random Seed.
+[    8.289210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.292008] laptop kernel: audit: type=1130 audit(1792280897.286:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.300708] laptop systemd[1]: Started User Database Manager.
+[    8.298209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-userdbd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.301007] laptop kernel: audit: type=1130 audit(1792280897.295:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-userdbd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.304044] laptop systemd[1]: Starting Load Kernel Module overlay...
+[    8.304783] laptop systemd[1]: Starting Load Kernel Module tun...
+[    8.305210] laptop audit[464]: NETFILTER_CFG table=filter:2 family=2 entries=40 op=nft_register_chain pid=464 comm="iptables-restor"
+[    8.305209] laptop audit[464]: SYSCALL arch=c000003e syscall=46 success=yes exit=5928 a0=3 a1=7ffde5c73830 a2=0 a3=0 items=0 ppid=450 pid=464 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.305209] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.308012] laptop kernel: audit: type=1325 audit(1792280897.302:11): table=filter:2 family=2 entries=40 op=nft_register_chain pid=464 comm="iptables-restor"
+[    8.314984] laptop systemd[1]: modprobe@tun.service: Deactivated successfully.
+[    8.315027] laptop kernel: tun: Universal TUN/TAP device driver, 1.6
+[    8.315200] laptop systemd[1]: Finished Load Kernel Module tun.
+[    8.313210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@tun comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.313210] laptop audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@tun comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.316244] laptop systemd[1]: modprobe@overlay.service: Deactivated successfully.
+[    8.316411] laptop systemd[1]: Finished Load Kernel Module overlay.
+[    8.314210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@overlay comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.314209] laptop audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@overlay comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.316778] laptop systemd[1]: Finished Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+[    8.314209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.316209] laptop audit: BPF prog-id=34 op=LOAD
+[    8.316209] laptop audit: BPF prog-id=35 op=LOAD
+[    8.316209] laptop audit: BPF prog-id=36 op=LOAD
+[    8.318507] laptop systemd[1]: Starting Namespace Resource Manager...
+[    8.331209] laptop audit[466]: NETFILTER_CFG table=filter:3 family=2 entries=2 op=nft_register_rule pid=466 comm="iptables-restor"
+[    8.331209] laptop audit[466]: SYSCALL arch=c000003e syscall=46 success=yes exit=1016 a0=3 a1=7ffcc3f8ce40 a2=0 a3=0 items=0 ppid=450 pid=466 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.331210] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.334210] laptop audit[475]: NETFILTER_CFG table=filter:4 family=2 entries=2 op=nft_register_chain pid=475 comm="iptables-restor"
+[    8.334209] laptop audit[475]: SYSCALL arch=c000003e syscall=46 success=yes exit=160 a0=3 a1=7fffeed124b0 a2=0 a3=0 items=0 ppid=450 pid=475 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.334209] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.336209] laptop audit[478]: NETFILTER_CFG table=filter:5 family=2 entries=6 op=nft_register_chain pid=478 comm="iptables-restor"
+[    8.336209] laptop audit[478]: SYSCALL arch=c000003e syscall=46 success=yes exit=780 a0=3 a1=7ffe48156ad0 a2=0 a3=0 items=0 ppid=450 pid=478 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.336209] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.337209] laptop audit: BPF prog-id=37 op=LOAD
+[    8.337210] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=13 a0=5 a1=7ffcde5760f0 a2=94 a3=7f3592180632 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.337209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.337210] laptop audit: BPF prog-id=37 op=UNLOAD
+[    8.337210] laptop audit[472]: SYSCALL arch=c000003e syscall=3 success=yes exit=0 a0=d a1=0 a2=0 a3=0 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.337209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.337209] laptop audit: BPF prog-id=38 op=LOAD
+[    8.337209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=13 a0=5 a1=7ffcde576100 a2=a8 a3=2 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.337210] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.337209] laptop audit: BPF prog-id=38 op=UNLOAD
+[    8.337209] laptop audit[472]: SYSCALL arch=c000003e syscall=3 success=yes exit=0 a0=d a1=0 a2=0 a3=0 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.337209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.359210] laptop audit: BPF prog-id=39 op=LOAD
+[    8.359210] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=62 a0=5 a1=7ffcde575db0 a2=94 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.359209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.359210] laptop audit: BPF prog-id=39 op=UNLOAD
+[    8.359210] laptop audit[472]: SYSCALL arch=c000003e syscall=3 success=yes exit=0 a0=3e a1=0 a2=0 a3=0 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.359209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.359210] laptop audit: BPF prog-id=40 op=LOAD
+[    8.359209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=62 a0=5 a1=7ffcde575ee0 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.359209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.359209] laptop audit: BPF prog-id=40 op=UNLOAD
+[    8.359210] laptop audit[472]: SYSCALL arch=c000003e syscall=3 success=yes exit=0 a0=3e a1=0 a2=0 a3=0 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.359209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.359209] laptop audit: BPF prog-id=41 op=LOAD
+[    8.359209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=62 a0=5 a1=7ffcde575ff0 a2=a8 a3=6 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.359209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.360210] laptop audit: BPF prog-id=41 op=UNLOAD
+[    8.360209] laptop audit[472]: SYSCALL arch=c000003e syscall=3 success=yes exit=0 a0=3e a1=0 a2=0 a3=0 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.360209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.360209] laptop audit: BPF prog-id=42 op=LOAD
+[    8.360209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=62 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.360210] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.352210] laptop audit[479]: NETFILTER_CFG table=filter:6 family=2 entries=25 op=nft_register_chain pid=479 comm="iptables-restor"
+[    8.352209] laptop audit[479]: SYSCALL arch=c000003e syscall=46 success=yes exit=7872 a0=3 a1=7ffcb05dce10 a2=0 a3=0 items=0 ppid=450 pid=479 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.352209] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.384210] laptop audit[486]: NETFILTER_CFG table=filter:7 family=2 entries=7 op=nft_register_rule pid=486 comm="iptables-restor"
+[    8.384209] laptop audit[486]: SYSCALL arch=c000003e syscall=46 success=yes exit=2820 a0=3 a1=7fff056d7390 a2=0 a3=0 items=0 ppid=450 pid=486 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.384209] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.387209] laptop audit[489]: NETFILTER_CFG table=filter:8 family=2 entries=8 op=nft_register_chain pid=489 comm="iptables-restor"
+[    8.387209] laptop audit[489]: SYSCALL arch=c000003e syscall=46 success=yes exit=504 a0=3 a1=7ffc222a0f10 a2=0 a3=0 items=0 ppid=450 pid=489 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.387210] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.402210] laptop audit[490]: NETFILTER_CFG table=filter:9 family=2 entries=8 op=nft_register_rule pid=490 comm="iptables-restor"
+[    8.402209] laptop audit[490]: SYSCALL arch=c000003e syscall=46 success=yes exit=3128 a0=3 a1=7ffc6e27c390 a2=0 a3=0 items=0 ppid=450 pid=490 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.402210] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.403210] laptop audit[494]: NETFILTER_CFG table=filter:10 family=2 entries=3 op=nft_register_rule pid=494 comm="iptables-restor"
+[    8.403210] laptop audit[494]: SYSCALL arch=c000003e syscall=46 success=yes exit=628 a0=3 a1=7ffd5243d5f0 a2=0 a3=0 items=0 ppid=450 pid=494 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.403209] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.404209] laptop audit[496]: NETFILTER_CFG table=filter:11 family=2 entries=3 op=nft_register_chain pid=496 comm="iptables-restor"
+[    8.404209] laptop audit[496]: SYSCALL arch=c000003e syscall=46 success=yes exit=384 a0=3 a1=7ffcc950d410 a2=0 a3=0 items=0 ppid=450 pid=496 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.404210] laptop audit: PROCTITLE proctitle=69707461626C65732D726573746F7265002D6E
+[    8.415210] laptop audit[499]: NETFILTER_CFG table=filter:12 family=10 entries=40 op=nft_register_chain pid=499 comm="ip6tables-resto"
+[    8.415210] laptop audit[499]: SYSCALL arch=c000003e syscall=46 success=yes exit=5952 a0=3 a1=7ffd764bb800 a2=0 a3=0 items=0 ppid=450 pid=499 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.415209] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.416209] laptop audit[501]: NETFILTER_CFG table=filter:13 family=10 entries=2 op=nft_register_rule pid=501 comm="ip6tables-resto"
+[    8.416209] laptop audit[501]: SYSCALL arch=c000003e syscall=46 success=yes exit=984 a0=3 a1=7fffb1f63250 a2=0 a3=0 items=0 ppid=450 pid=501 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.416210] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.418209] laptop audit[504]: NETFILTER_CFG table=filter:14 family=10 entries=2 op=nft_register_chain pid=504 comm="ip6tables-resto"
+[    8.418209] laptop audit[504]: SYSCALL arch=c000003e syscall=46 success=yes exit=160 a0=3 a1=7fffc8f25e40 a2=0 a3=0 items=0 ppid=450 pid=504 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.418210] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.420210] laptop audit[507]: NETFILTER_CFG table=filter:15 family=10 entries=6 op=nft_register_chain pid=507 comm="ip6tables-resto"
+[    8.420209] laptop audit[507]: SYSCALL arch=c000003e syscall=46 success=yes exit=780 a0=3 a1=7ffe975d3260 a2=0 a3=0 items=0 ppid=450 pid=507 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.420209] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.432209] laptop audit[508]: NETFILTER_CFG table=filter:16 family=10 entries=65 op=nft_register_rule pid=508 comm="ip6tables-resto"
+[    8.432209] laptop audit[508]: SYSCALL arch=c000003e syscall=46 success=yes exit=25484 a0=3 a1=7fff106752f0 a2=0 a3=0 items=0 ppid=450 pid=508 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.432209] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.434209] laptop audit[511]: NETFILTER_CFG table=filter:17 family=10 entries=6 op=nft_register_rule pid=511 comm="ip6tables-resto"
+[    8.434209] laptop audit[511]: SYSCALL arch=c000003e syscall=46 success=yes exit=2496 a0=3 a1=7ffd4848c2b0 a2=0 a3=0 items=0 ppid=450 pid=511 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.434210] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.436209] laptop audit[514]: NETFILTER_CFG table=filter:18 family=10 entries=8 op=nft_register_chain pid=514 comm="ip6tables-resto"
+[    8.436209] laptop audit[514]: SYSCALL arch=c000003e syscall=46 success=yes exit=512 a0=3 a1=7ffc099ef2b0 a2=0 a3=0 items=0 ppid=450 pid=514 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.436210] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.445209] laptop audit[515]: NETFILTER_CFG table=filter:19 family=10 entries=8 op=nft_register_rule pid=515 comm="ip6tables-resto"
+[    8.445209] laptop audit[515]: SYSCALL arch=c000003e syscall=46 success=yes exit=3144 a0=3 a1=7ffe460ee140 a2=0 a3=0 items=0 ppid=450 pid=515 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.445209] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.446210] laptop audit[518]: NETFILTER_CFG table=filter:20 family=10 entries=3 op=nft_register_rule pid=518 comm="ip6tables-resto"
+[    8.446210] laptop audit[518]: SYSCALL arch=c000003e syscall=46 success=yes exit=632 a0=3 a1=7fff10cc6460 a2=0 a3=0 items=0 ppid=450 pid=518 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.446209] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.448209] laptop audit[520]: NETFILTER_CFG table=filter:21 family=10 entries=3 op=nft_register_chain pid=520 comm="ip6tables-resto"
+[    8.448209] laptop audit[520]: SYSCALL arch=c000003e syscall=46 success=yes exit=384 a0=3 a1=7ffe56926280 a2=0 a3=0 items=0 ppid=450 pid=520 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="ip6tables-resto" exe="/usr/bin/xtables-nft-multi" key=(null)
+[    8.448209] laptop audit: PROCTITLE proctitle=6970367461626C65732D726573746F7265002D6E
+[    8.458357] laptop systemd[1]: Finished CLI Netfilter Manager.
+[    8.456209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=ufw comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.528480] laptop systemd[1]: Finished Coldplug All udev Devices.
+[    8.526210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.360209] laptop audit: BPF prog-id=43 op=LOAD
+[    8.360209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=63 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.360209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.647209] laptop audit: BPF prog-id=44 op=LOAD
+[    8.647209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=64 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.647209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    8.922210] laptop audit: BPF prog-id=45 op=LOAD
+[    8.922210] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=65 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    8.922210] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    9.196210] laptop audit: BPF prog-id=46 op=LOAD
+[    9.196209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=66 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    9.196210] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    9.472209] laptop audit: BPF prog-id=47 op=LOAD
+[    9.472210] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=67 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    9.472209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    9.968210] laptop audit: BPF prog-id=48 op=LOAD
+[    9.968210] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=68 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    9.968209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    9.969209] laptop audit: BPF prog-id=49 op=LOAD
+[    9.969209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=69 a0=5 a1=7ffcde576100 a2=a8 a3=7f359219a080 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    9.969210] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    9.975187] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_path_chown now attached.
+[    9.978604] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_path_mkdir now attached.
+[    9.982209] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_path_mknod now attached.
+[    9.985817] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_path_symlink now attached.
+[    9.989491] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_path_link now attached.
+[    9.993176] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_sb_kern_mount now attached.
+[    9.996963] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_task_fix_setgroups now attached.
+[    9.998210] laptop audit: BPF prog-id=50 op=LOAD
+[    9.998209] laptop audit[472]: SYSCALL arch=c000003e syscall=321 success=yes exit=22 a0=5 a1=7ffcde575ec0 a2=a8 a3=2 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    9.998209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[    9.998210] laptop audit: BPF prog-id=50 op=UNLOAD
+[    9.998210] laptop audit[472]: SYSCALL arch=c000003e syscall=3 success=yes exit=0 a0=16 a1=0 a2=0 a3=0 items=0 ppid=1 pid=472 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-nsresou" exe="/usr/lib/systemd/systemd-nsresourced" key=(null)
+[    9.998209] laptop audit: PROCTITLE proctitle="/usr/lib/systemd/systemd-nsresourced"
+[   10.000223] laptop systemd-nsresourced[472]: userns-restrict BPF-LSM program userns_restrict_retire_userns_sysctls now attached.
+[   10.000999] laptop systemd[1]: Started Namespace Resource Manager.
+[    9.999209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-nsresourced comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.014048] laptop systemd[1]: Finished Create Static Device Nodes in /dev gracefully.
+[   10.012209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev-early comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.014764] laptop systemd[1]: Create System Users skipped, no trigger condition checks were met.
+[   10.016169] laptop systemd[1]: Starting Journal Metrics Report Socket...
+[   10.026916] laptop systemd[1]: Starting Journal Log Access Socket...
+[   10.026209] laptop audit: BPF prog-id=51 op=LOAD
+[   10.028681] laptop systemd[1]: Starting Network Name Resolution...
+[   10.029408] laptop systemd[1]: Starting Create Static Device Nodes in /dev...
+[   10.030747] laptop systemd[1]: Listening on Journal Metrics Report Socket.
+[   10.030864] laptop systemd[1]: Listening on Journal Log Access Socket.
+[   10.047606] laptop systemd[1]: Finished Create Static Device Nodes in /dev.
+[   10.045209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.048151] laptop systemd[1]: Reached target Preparation for Local File Systems.
+[   10.048222] laptop systemd[1]: Virtual Machine and Container Storage (Compatibility) skipped, unmet condition check ConditionPathExists=/var/lib/machines.raw
+[   10.048236] laptop systemd[1]: Reached target Virtual Machines and Containers.
+[   10.048328] laptop systemd[1]: Listening on Disk Image Download Service Socket.
+[   10.048386] laptop systemd[1]: Repartition Root Disk skipped, no trigger condition checks were met.
+[   10.046209] laptop audit: BPF prog-id=52 op=LOAD
+[   10.046210] laptop audit: BPF prog-id=53 op=LOAD
+[   10.049274] laptop systemd[1]: Starting Rule-based Manager for Device Events and Files...
+[   10.056615] laptop systemd-resolved[533]: Positive Trust Anchors:
+[   10.056622] laptop systemd-resolved[533]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+[   10.056626] laptop systemd-resolved[533]: . IN DS 38696 8 2 683d2d0acb8c9b712a1948b27f741219298d0a450d612c483af444a4c0fb2b16
+[   10.056647] laptop systemd-resolved[533]: Negative trust anchors: home.arpa 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 170.0.0.192.in-addr.arpa 171.0.0.192.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa ipv4only.arpa resolver.arpa corp home internal intranet lan local private test
+[   10.057126] laptop systemd-resolved[533]: Using system hostname 'laptop'.
+[   10.058227] laptop systemd[1]: Started Network Name Resolution.
+[   10.056209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-resolved comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.058328] laptop systemd[1]: Reached target Host and Network Name Lookups.
+[   10.057209] laptop audit: BPF prog-id=54 op=LOAD
+[   10.060190] laptop systemd[1]: Starting Network Time Synchronization...
+[   10.074893] laptop systemd-udevd[539]: Using default interface naming scheme 'v261'.
+[   10.088349] laptop systemd[1]: Started Network Time Synchronization.
+[   10.086210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timesyncd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.088489] laptop systemd[1]: Reached target System Time Set.
+[   10.088710] laptop systemd-resolved[533]: Switching to fallback DNS server 9.9.9.9#dns.quad9.net.
+[   10.102939] laptop systemd[1]: Started Rule-based Manager for Device Events and Files.
+[   10.100210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.120209] laptop audit: BPF prog-id=6 op=UNLOAD
+[   10.120210] laptop audit: BPF prog-id=5 op=UNLOAD
+[   10.197916] laptop systemd[1]: Found device /dev/zram0.
+[   10.200192] laptop systemd[1]: Starting Create swap on /dev/zram0...
+[   10.203641] laptop systemd[1]: Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[   10.204545] laptop kernel: [drm] pre_validate_dsc:1747 MST_DSC dsc precompute is not needed
+[   10.205881] laptop systemd[1]: Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+[   10.215015] laptop kernel: zram0: detected capacity change from 0 to 64372736
+[   10.218042] laptop kernel: mousedev: PS/2 mouse device common for all mice
+[   10.221775] laptop systemd[1]: Created slice Slice /system/systemd-backlight.
+[   10.222659] laptop systemd[1]: Starting Load/Save Screen Backlight Brightness of backlight:amdgpu_bl2...
+[   10.223551] laptop systemd-makefs[606]: Formatting /dev/zram0 as swap
+[   10.229444] laptop systemd-makefs[606]: /dev/zram0 successfully formatted as swap (label "zram0", uuid de3ec1d3-2196-41f3-9b5f-ba0db4d96ac2)
+[   10.233150] laptop systemd[1]: Finished Create swap on /dev/zram0.
+[   10.231210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-zram-setup@zram0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.237798] laptop systemd[1]: Activating swap Compressed Swap on /dev/zram0...
+[   10.241503] laptop systemd[1]: Condition check resulted in /dev/tpmrm0 being skipped.
+[   10.241602] laptop systemd[1]: Expecting device /dev/tpm0...
+[   10.265988] laptop mtp-probe[622]: checking bus 1, device 7: "/sys/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4"
+[   10.267042] laptop kernel: input: Acer Wireless Radio Control as /devices/platform/10251229:00/input/input24
+[   10.269306] laptop mtp-probe[622]: bus: 1, device: 7 was not an MTP device
+[   10.299452] laptop systemd[1]: Condition check resulted in /dev/tpm0 being skipped.
+[   10.299495] laptop systemd[1]: Reached target Trusted Platform Module.
+[   10.319016] laptop kernel: input: PC Speaker as /devices/platform/pcspkr/input/input25
+[   10.324186] laptop systemd[1]: Condition check resulted in WDC PC SN530 SDBPNPZ-256G-1114 1 being skipped.
+[   10.324565] laptop systemd[1]: Finished Load/Save Screen Backlight Brightness of backlight:amdgpu_bl2.
+[   10.322209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-backlight@backlight:amdgpu_bl2 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.344380] laptop systemd[1]: Found device WDC PC SN530 SDBPNPZ-256G-1114 POND_ROOT.
+[   10.355019] laptop kernel: RAPL PMU: API unit is 2^-32 Joules, 2 fixed counters, 163840 ms ovfl timer
+[   10.355065] laptop kernel: RAPL PMU: hw unit of domain package 2^-16 Joules
+[   10.355084] laptop kernel: RAPL PMU: hw unit of domain core 2^-16 Joules
+[   10.355097] laptop kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   10.355109] laptop kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   10.355121] laptop kernel: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   10.357149] laptop systemd[1]: Mounting /.snapshots...
+[   10.358067] laptop systemd[1]: Mounting /home...
+[   10.358883] laptop systemd[1]: Mounting /nix...
+[   10.358945] laptop systemd[1]: root.mount: Directory /root to mount over is not empty, mounting anyway.
+[   10.366605] laptop (udev-worker)[566]: cfg80211: Process '/usr/bin/set-wireless-regdom' failed with exit code 1.
+[   10.371219] laptop systemd[1]: Mounting /root...
+[   10.373126] laptop systemd[1]: Mounting /srv...
+[   10.373949] laptop systemd[1]: Mounting /usr/local...
+[   10.374041] laptop systemd[1]: var-cache.mount: Directory /var/cache to mount over is not empty, mounting anyway.
+[   10.374940] laptop systemd[1]: Mounting /var/cache...
+[   10.375010] laptop kernel: input: ELAN050A:00 04F3:31B1 Mouse as /devices/platform/AMDI0010:03/i2c-0/i2c-ELAN050A:00/0018:04F3:31B1.000D/input/input26
+[   10.375640] laptop systemd[1]: Mounting /var/lib/flatpak...
+[   10.376358] laptop systemd[1]: Mounting /var/log...
+[   10.377306] laptop systemd[1]: Mounting /var/tmp...
+[   10.378181] laptop systemd[1]: Starting File System Check on /dev/disk/by-partuuid/583ab356-a8c0-4f9b-b3f0-792b2dab268f...
+[   10.382728] laptop systemd[1]: Mounted /.snapshots.
+[   10.382882] laptop systemd[1]: Mounted /home.
+[   10.382994] laptop systemd[1]: Mounted /nix.
+[   10.383143] laptop systemd[1]: Mounted /root.
+[   10.383245] laptop systemd[1]: Mounted /srv.
+[   10.383346] laptop systemd[1]: Mounted /usr/local.
+[   10.383446] laptop systemd[1]: Mounted /var/cache.
+[   10.383549] laptop systemd[1]: Mounted /var/lib/flatpak.
+[   10.383650] laptop systemd[1]: Mounted /var/log.
+[   10.383750] laptop systemd[1]: Mounted /var/tmp.
+[   10.389161] laptop systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[   10.390078] laptop systemd[1]: Started AN515 crash trace (per-second state and journal to /var/log/an515, fsynced).
+[   10.388209] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=an515-trace comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.391050] laptop systemd[1]: Starting Flush Journal to Persistent Storage...
+[   10.391085] laptop systemd[1]: systemd-vconsole-setup.service: Deactivated successfully.
+[   10.391146] laptop systemd[1]: Stopped Virtual Console Setup.
+[   10.389209] laptop audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.391202] laptop systemd[1]: Stopping Virtual Console Setup...
+[   10.391907] laptop systemd[1]: Starting Virtual Console Setup...
+[   10.395805] laptop systemd-fsck[651]: fsck.fat 4.2 (2021-01-31)
+[   10.395805] laptop systemd-fsck[651]: There are differences between boot sector and its backup.
+[   10.395805] laptop systemd-fsck[651]: This is mostly harmless. Differences: (offset:original/backup)
+[   10.395805] laptop systemd-fsck[651]:   65:01/00
+[   10.395805] laptop systemd-fsck[651]:   Not automatically fixing this.
+[   10.395805] laptop systemd-fsck[651]: Dirty bit is set. Fs was not properly unmounted and some data may be corrupt.
+[   10.395805] laptop systemd-fsck[651]:  Automatically removing dirty bit.
+[   10.395805] laptop systemd-fsck[651]: *** Filesystem was changed ***
+[   10.395805] laptop systemd-fsck[651]: Writing changes.
+[   10.395805] laptop systemd-fsck[651]: /dev/nvme1n1p1: 10 files, 4665/249364 clusters
+[   10.396193] laptop systemd-timesyncd[540]: Network configuration changed, trying to establish connection.
+[   10.397070] laptop systemd[1]: Finished File System Check on /dev/disk/by-partuuid/583ab356-a8c0-4f9b-b3f0-792b2dab268f.
+[   10.395210] laptop audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-fsck@dev-disk-by\x2dpartuuid-583ab356\x2da8c0\x2d4f9b\x2db3f0\x2d792b2dab268f comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.397222] laptop systemd-journald[420]: Time spent on flushing to /var/log/journal/6dd80cf9188a45349012f5aba8250e22 is 9.801ms for 1573 entries.
